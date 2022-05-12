@@ -49,3 +49,44 @@ INFO 2022-05-11 13:22:35,072 [MainThread:4378215808] [django.utils.autoreload:26
 INFO 2022-05-11 13:22:35,235 [MainThread:4304307584] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 WARNING 2022-05-11 13:23:26,082 [Thread-1:6199816192] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://0.0.0.0:8080 does not match any trusted origins.): /api/uploadImage/
 WARNING 2022-05-11 13:23:26,085 [Thread-1:6199816192] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2567
+INFO 2022-05-11 13:29:13,937 [MainThread:4369352064] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-11 13:29:28,608 [Thread-1:6135115776] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 88
+WARNING 2022-05-11 13:29:31,745 [Thread-2:6135115776] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://0.0.0.0:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-11 13:29:31,749 [Thread-2:6135115776] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2567
+INFO 2022-05-11 13:30:11,662 [MainThread:4369352064] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/python_dip_courseproject_django/settings.py changed, reloading.
+INFO 2022-05-11 13:30:11,858 [MainThread:4374152576] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+WARNING 2022-05-11 13:30:15,564 [Thread-1:6128611328] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://0.0.0.0:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-11 13:30:15,567 [Thread-1:6128611328] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2567
+INFO 2022-05-11 13:32:55,585 [MainThread:4374152576] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/python_dip_courseproject_django/settings.py changed, reloading.
+INFO 2022-05-11 13:32:55,757 [MainThread:4308223360] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-11 13:32:59,877 [MainThread:4308223360] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/python_dip_courseproject_django/settings.py changed, reloading.
+INFO 2022-05-11 13:33:00,064 [MainThread:4304323968] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-11 13:33:14,194 [Thread-1:6199980032] [django.server:187] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 88
+WARNING 2022-05-11 13:33:14,293 [Thread-1:6199980032] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2579
+INFO 2022-05-11 13:33:24,873 [Thread-2:6216806400] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 88
+WARNING 2022-05-11 13:33:28,304 [Thread-3:6216806400] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://localhost:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-11 13:33:28,306 [Thread-3:6216806400] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2569
+INFO 2022-05-11 13:33:44,787 [Thread-4:6216806400] [django.server:187] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 88
+INFO 2022-05-11 13:33:51,892 [Thread-6:6250459136] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 88
+WARNING 2022-05-11 13:34:04,089 [Thread-7:6250459136] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://localhost:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-11 13:34:04,092 [Thread-7:6250459136] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2569
+INFO 2022-05-11 13:34:37,775 [Thread-4:6216806400] [django.server:187] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 88
+INFO 2022-05-11 13:36:19,199 [MainThread:4304323968] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-11 13:36:19,513 [MainThread:4377347456] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-11 13:36:22,654 [MainThread:4377347456] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-11 13:36:22,798 [MainThread:4312597888] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+WARNING 2022-05-11 13:36:26,982 [Thread-1:6190641152] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://localhost:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-11 13:36:26,984 [Thread-1:6190641152] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2569
+INFO 2022-05-12 04:09:14,975 [MainThread:4374414720] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-12 04:09:26,150 [MainThread:4374414720] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-12 04:09:26,435 [MainThread:4308305280] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+WARNING 2022-05-12 04:09:28,507 [Thread-1:6196736000] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://0.0.0.0:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-12 04:09:28,511 [Thread-1:6196736000] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2567
+INFO 2022-05-12 04:09:44,361 [Thread-2:6196736000] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 88
+WARNING 2022-05-12 04:09:47,794 [Thread-3:6196736000] [django.security.csrf:241] [log:log_response] [WARNING]- Forbidden (Origin checking failed - http://0.0.0.0:8080 does not match any trusted origins.): /api/uploadImage/
+WARNING 2022-05-12 04:09:47,795 [Thread-3:6196736000] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/uploadImage/ HTTP/1.1" 403 2567
+INFO 2022-05-12 04:11:09,096 [Thread-4:6196736000] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 88
+INFO 2022-05-12 04:13:17,560 [MainThread:4308305280] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/python_dip_courseproject_django/settings.py changed, reloading.
+INFO 2022-05-12 04:13:17,896 [MainThread:4368074112] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-12 04:13:24,057 [MainThread:4368074112] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/python_dip_courseproject_django/settings.py changed, reloading.
+INFO 2022-05-12 04:13:24,288 [MainThread:4300195200] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
