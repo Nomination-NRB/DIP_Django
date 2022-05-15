@@ -41,15 +41,19 @@ class ImageSet(ModelViewSet):
 
 class resize(APIView):
     def post(self, request):
+        # POST参数
         print(request.data)
-        # 获取图片
+
         # X,Y轴变化率
         zoomXValue = request.data.get("zoomXValue")
         zoomYValue = request.data.get("zoomYValue")
-        images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images,context={'request': request})
 
-        path = re.search(r'media/(.*)', serializer.data['file'])
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
         # 调用处理函数
-        imageResize(zoomXValue, zoomYValue, path.group())
+        imageResize(zoomXValue, zoomYValue, path)
+        # 返回定制格式的JSON
         return success(serializer.data)

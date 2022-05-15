@@ -780,3 +780,123 @@ INFO 2022-05-15 16:27:24,177 [Thread-1:6127136768] [django.server:187] [basehttp
 INFO 2022-05-15 16:27:43,116 [MainThread:4381410688] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
 INFO 2022-05-15 16:27:43,284 [MainThread:4334388608] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-15 16:29:21,681 [Thread-1:6172553216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 130
+INFO 2022-05-15 16:30:09,232 [MainThread:4334388608] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:30:09,456 [MainThread:4365567360] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:30:32,150 [MainThread:4365567360] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:30:32,364 [MainThread:4308239744] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:31:36,654 [MainThread:4308239744] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:31:36,919 [MainThread:4376544640] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:45:49,248 [MainThread:4345070976] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:49:45,719 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:50:04,933 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 139
+INFO 2022-05-15 16:50:04,949 [Thread-2:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/alina-fedorchenko-bqnCp2boKFk-unsplash_RnAYGcI.jpg HTTP/1.1" 200 3020158
+INFO 2022-05-15 16:51:08,152 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:51:09,207 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:51:19,502 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:51:22,264 [Thread-1:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 139
+INFO 2022-05-15 16:51:22,292 [Thread-2:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/alina-fedorchenko-bqnCp2boKFk-unsplash_UfNBnzq.jpg HTTP/1.1" 200 3020158
+INFO 2022-05-15 16:51:35,335 [Thread-2:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/alina-fedorchenko-bqnCp2boKFk-unsplash_UfNBnzq.jpg HTTP/1.1" 200 3020158
+INFO 2022-05-15 16:53:01,242 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:55:09,675 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:55:19,480 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 139
+INFO 2022-05-15 16:55:19,499 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/alina-fedorchenko-bqnCp2boKFk-unsplash_WtG0L5m.jpg HTTP/1.1" 200 3020158
+INFO 2022-05-15 16:55:41,090 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:55:41,742 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:55:43,792 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 16:55:43,801 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_rqD0G2H.png HTTP/1.1" 200 3424
+INFO 2022-05-15 16:55:53,657 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:55:54,251 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:09,040 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:10,183 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:22,650 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:23,767 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:32,943 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 16:56:32,952 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_CJEbcp7.png HTTP/1.1" 200 3424
+INFO 2022-05-15 16:56:51,077 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:56:53,917 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 16:56:53,925 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_GgpkUAg.png HTTP/1.1" 200 3424
+INFO 2022-05-15 16:57:06,335 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:57:09,019 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 139
+INFO 2022-05-15 16:57:09,041 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/alina-fedorchenko-bqnCp2boKFk-unsplash_veacdgX.jpg HTTP/1.1" 200 3020158
+INFO 2022-05-15 16:57:27,863 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:58:02,633 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 16:58:02,642 [Thread-4:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_k23jF5l.png HTTP/1.1" 200 3424
+INFO 2022-05-15 16:58:03,462 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/ImageSet/ HTTP/1.1" 200 0
+WARNING 2022-05-15 16:58:03,467 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/ImageSet/ HTTP/1.1" 400 35
+WARNING 2022-05-15 16:58:22,702 [Thread-3:6162706432] [django.server:187] [basehttp:log_message] [WARNING]- "POST /api/ImageSet/ HTTP/1.1" 400 35
+INFO 2022-05-15 16:58:49,583 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 16:58:51,021 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+ERROR 2022-05-15 16:58:51,061 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 98332
+INFO 2022-05-15 16:58:56,690 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 16:58:56,703 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_076MfA8.png HTTP/1.1" 200 3424
+ERROR 2022-05-15 16:58:58,510 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 98332
+ERROR 2022-05-15 16:59:46,811 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 98332
+INFO 2022-05-15 17:00:05,993 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:00:34,337 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:00:34,882 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:00:53,006 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:00:55,824 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:00:55,834 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_pqgpsPX.png HTTP/1.1" 200 3424
+ERROR 2022-05-15 17:00:56,635 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 98332
+INFO 2022-05-15 17:02:14,813 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:02:15,425 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:02:17,891 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:02:17,900 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_GMwvMyj.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:02:47,201 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:02:47,775 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:02:49,925 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:02:49,933 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_MjHmUnj.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:03:02,690 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:03,213 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:22,353 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:22,903 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:25,388 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:03:25,395 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_Ldp4L9H.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:03:48,218 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:53,882 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:03:56,627 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:03:56,635 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_iek83Nj.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:04:06,964 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:04:10,266 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:04:10,277 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_tHNLKr0.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:04:26,087 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:04:46,119 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:04:48,306 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:04:48,315 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_4uU9UV6.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:06:29,173 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:06:32,680 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:06:32,687 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_4yeY4X8.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:06:49,261 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:06:54,105 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:06:57,052 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:06:57,059 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_lxsGwhI.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:07:16,652 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:07:35,021 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:07:37,980 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:07:37,986 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_9LAj3Eg.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:08:07,930 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:08:11,306 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:08:11,314 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_vqsL1wS.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:08:59,895 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:09:02,225 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:09:04,648 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:09:04,660 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_vT7eCJ5.png HTTP/1.1" 200 3424
+INFO 2022-05-15 17:09:18,999 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-15 17:09:22,286 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 164
+INFO 2022-05-15 17:09:22,296 [Thread-6:6325039104] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_WFZVeqc.png HTTP/1.1" 200 3424
+ERROR 2022-05-15 17:09:24,383 [Thread-5:6162706432] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 94102
+INFO 2022-05-15 17:09:57,978 [MainThread:4337452416] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:10:40,310 [MainThread:4313892224] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:17:57,533 [MainThread:4313892224] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 17:17:58,292 [MainThread:4374087040] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:18:11,643 [MainThread:4312597888] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:18:13,229 [MainThread:4315153792] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:18:37,737 [MainThread:4305814912] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:20:36,736 [MainThread:4305814912] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 17:20:37,288 [MainThread:4310992256] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:20:50,162 [MainThread:4310992256] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 17:20:51,920 [MainThread:4341646720] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:21:12,145 [MainThread:4341646720] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 17:21:12,836 [MainThread:4300932480] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:21:39,252 [MainThread:4378215808] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 17:21:41,254 [Thread-1:6130003968] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 164

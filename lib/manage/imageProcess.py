@@ -1,9 +1,13 @@
 import cv2
+
+
+from urllib import parse
+
 from python_dip_courseproject_django.settings import MEDIA_ROOT
 
 
 def imageResize(x, y, filePath):
-    print(filePath)
+    filePath = parse.unquote(filePath)
     img = cv2.imread(filePath)
     x=float(x)
     y=float(y)
