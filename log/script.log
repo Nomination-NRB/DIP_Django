@@ -118,3 +118,580 @@ ValueError: The view api.views.receive_image didn't return an HttpResponse objec
 WARNING 2022-05-13 03:03:06,666 [Thread-1:6165770240] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/uploadImage/
 WARNING 2022-05-13 03:03:57,918 [Thread-1:6166933504] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/uploadImage/
 WARNING 2022-05-13 03:04:52,095 [Thread-1:6197850112] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/uploadImage/
+WARNING 2022-05-13 08:55:33,005 [Thread-1:6204436480] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/receive_image
+WARNING 2022-05-13 08:55:36,635 [Thread-1:6204436480] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/receive_image/
+WARNING 2022-05-13 09:28:05,972 [Thread-1:6192803840] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-05-13 09:29:54,176 [Thread-2:6209630208] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+ERROR 2022-05-13 14:49:24,586 [Thread-1:6128513024] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:49:32,100 [Thread-1:6128513024] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:49:36,371 [Thread-1:6128513024] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageAPI/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 26, in get
+    images = Image.objects.all()
+AttributeError: type object 'Image' has no attribute 'objects'
+ERROR 2022-05-13 14:49:42,378 [Thread-1:6128513024] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:49:48,406 [Thread-1:6128513024] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:50:20,770 [Thread-1:6192820224] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:50:51,089 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:50:51,999 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:50:55,943 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:50:57,920 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:51:02,542 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageAPI/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 26, in get
+    images = Image.objects.all()
+AttributeError: type object 'Image' has no attribute 'objects'
+ERROR 2022-05-13 14:51:28,230 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:51:30,353 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:51:32,276 [Thread-1:6165049344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:52:55,750 [Thread-1:6155661312] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:53:23,408 [Thread-1:6155661312] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:56:47,016 [Thread-1:6160658432] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:57:05,181 [Thread-1:6191607808] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-05-13 14:57:33,238 [Thread-1:6163001344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view api.views.index didn't return an HttpResponse object. It returned None instead.
+ERROR 2022-05-13 15:11:55,823 [Thread-1:6126776320] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageGetAll/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 25, in get
+    images = Image.objects.get(pk=request.query_params.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+WARNING 2022-05-13 15:12:01,570 [Thread-1:6126776320] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/ImageGetAll/1
+ERROR 2022-05-13 15:12:15,870 [Thread-1:6126776320] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageGetAll/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 27, in get
+    return success(serializer.data)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'Image' object is not iterable
+ERROR 2022-05-13 15:12:23,938 [Thread-1:6126776320] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageGetAll/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 27, in get
+    return success(serializer.data)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'Image' object is not iterable
+ERROR 2022-05-13 15:12:33,476 [Thread-1:6201307136] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageGetAll/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 27, in get
+    return success(serializer.data)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+TypeError: 'Image' object is not iterable
+WARNING 2022-05-15 12:36:30,129 [Thread-1:6196310016] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-05-15 12:36:30,131 [Thread-2:6213136384] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-05-15 12:36:30,265 [Thread-2:6213136384] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+WARNING 2022-05-15 12:36:36,545 [Thread-2:6213136384] [django.request:241] [log:log_response] [WARNING]- Not Found: /ImageSet/
+WARNING 2022-05-15 12:36:45,317 [Thread-2:6213136384] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/ImageSet/get/1
+ERROR 2022-05-15 12:36:49,511 [Thread-2:6213136384] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 22, in retrieve
+    instance = self.get_object(id=kwargs['id'])
+KeyError: 'id'
+ERROR 2022-05-15 12:37:15,431 [Thread-1:6159609856] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 680, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 413, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 66, in default
+    return tuple(item for item in obj)
+TypeError: 'Request' object is not iterable
+ERROR 2022-05-15 12:37:15,817 [Thread-1:6159609856] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 680, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 413, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 66, in default
+    return tuple(item for item in obj)
+TypeError: 'Request' object is not iterable
+ERROR 2022-05-15 12:37:58,946 [Thread-1:6124564480] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 22, in retrieve
+    instance = self.get_object(request.query_params.get('id'))
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:38:20,232 [Thread-1:6124564480] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 22, in retrieve
+    instance = self.get_object(request.query_params.get('id'))
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:39:11,355 [Thread-5:6188724224] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 23, in retrieve
+    instance = self.get_object(kwargs['pk'])
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:39:12,053 [Thread-5:6188724224] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 23, in retrieve
+    instance = self.get_object(kwargs['pk'])
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:39:12,962 [Thread-5:6188724224] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 23, in retrieve
+    instance = self.get_object(kwargs['pk'])
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:39:16,880 [Thread-1:6122418176] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/1/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 23, in retrieve
+    instance = self.get_object(kwargs['pk'])
+TypeError: get_object() takes 1 positional argument but 2 were given
+ERROR 2022-05-15 12:55:12,990 [Thread-1:6201896960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 37, in create
+    return success(serializer.data, headers=headers)
+TypeError: success() got an unexpected keyword argument 'headers'
