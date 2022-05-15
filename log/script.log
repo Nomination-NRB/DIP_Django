@@ -719,3 +719,4 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'http://127.0.0.1:8000/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_OTr7YXI.png'
 WARNING 2022-05-15 13:40:30,364 [Thread-2:6221361152] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知.png
 WARNING 2022-05-15 13:41:17,690 [Thread-2:6173683712] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知_0HzVpr2.png
+WARNING 2022-05-15 13:50:54,056 [Thread-2:6146338816] [django.request:241] [log:log_response] [WARNING]- Not Found: /media/images/IMG_9634.JPG
