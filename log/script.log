@@ -695,3 +695,27 @@ Traceback (most recent call last):
   File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 37, in create
     return success(serializer.data, headers=headers)
 TypeError: success() got an unexpected keyword argument 'headers'
+WARNING 2022-05-15 13:30:09,531 [Thread-2:6184644608] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知_hgX3jXK.png
+ERROR 2022-05-15 13:36:52,178 [Thread-5:6161788928] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/ImageSet/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 37, in create
+    file_one = open(serializer.data['file'], "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'http://127.0.0.1:8000/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5_OTr7YXI.png'
+WARNING 2022-05-15 13:40:30,364 [Thread-2:6221361152] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知.png
+WARNING 2022-05-15 13:41:17,690 [Thread-2:6173683712] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知_0HzVpr2.png

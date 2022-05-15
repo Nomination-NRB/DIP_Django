@@ -1,7 +1,8 @@
+from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from lib.utils.json_response import success
-
+from lib.utils.json_response import successHttpRequest
 from .models import Image
 from api.serializers import ImageSerializer
 
