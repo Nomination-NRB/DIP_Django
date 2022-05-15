@@ -1108,3 +1108,288 @@ cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
 >  - Argument 'fx' can not be treated as a double
 >  - Argument 'fx' can not be treated as a double
 
+ERROR 2022-05-15 16:11:24,908 [Thread-5:6220607488] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    imageResize(zoomXValue, zoomYValue, filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 10, in imageResize
+    out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_LINEAR)
+cv2.error: OpenCV(4.5.5) /Users/xperience/actions-runner/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/resize.cpp:4052: error: (-215:Assertion failed) !ssize.empty() in function 'resize'
+
+ERROR 2022-05-15 16:15:48,055 [Thread-1:6208040960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    path = re.Match(r'/media/(.*)', serializer.data['file'])
+TypeError: cannot create 're.Match' instances
+ERROR 2022-05-15 16:16:01,023 [Thread-5:6214955008] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    path = re.Match(r'/media/(.*)', serializer.data['file'])
+TypeError: cannot create 're.Match' instances
+ERROR 2022-05-15 16:16:14,293 [Thread-5:6210105344] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    path = re.Match(r'/media/(.*)', serializer.data['file'])
+TypeError: cannot create 're.Match' instances
+ERROR 2022-05-15 16:16:55,008 [Thread-5:6248427520] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 53, in post
+    print(path.group(1))
+AttributeError: 'NoneType' object has no attribute 'group'
+ERROR 2022-05-15 16:17:10,825 [Thread-5:6187642880] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 53, in post
+    print(path.group(1))
+AttributeError: 'NoneType' object has no attribute 'group'
+ERROR 2022-05-15 16:20:58,714 [Thread-1:6165491712] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 54, in post
+    imageResize(zoomXValue, zoomYValue, path.group())
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 10, in imageResize
+    out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_LINEAR)
+cv2.error: OpenCV(4.5.5) /Users/xperience/actions-runner/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/resize.cpp:4052: error: (-215:Assertion failed) !ssize.empty() in function 'resize'
+
+ERROR 2022-05-15 16:22:21,152 [Thread-1:6164295680] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    print(serializer)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 530, in __repr__
+    return representation.serializer_repr(self, indent=1)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 71, in serializer_repr
+    ret = field_repr(serializer, force_many) + ':'
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in field_repr
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in <listcomp>
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 33, in smart_repr
+    value = repr(value)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/base.py", line 580, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+TypeError: __str__ returned non-string (type ImageFieldFile)
+ERROR 2022-05-15 16:22:38,879 [Thread-1:6165426176] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    print(serializer)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 530, in __repr__
+    return representation.serializer_repr(self, indent=1)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 71, in serializer_repr
+    ret = field_repr(serializer, force_many) + ':'
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in field_repr
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in <listcomp>
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 33, in smart_repr
+    value = repr(value)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/base.py", line 580, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+TypeError: __str__ returned non-string (type ImageFieldFile)
+ERROR 2022-05-15 16:23:28,419 [Thread-5:6217248768] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    print(serializer)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 530, in __repr__
+    return representation.serializer_repr(self, indent=1)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 71, in serializer_repr
+    ret = field_repr(serializer, force_many) + ':'
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in field_repr
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in <listcomp>
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 33, in smart_repr
+    value = repr(value)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/base.py", line 580, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+TypeError: __str__ returned non-string (type ImageFieldFile)
+ERROR 2022-05-15 16:24:13,477 [Thread-1:6129627136] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    print(serializer)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 530, in __repr__
+    return representation.serializer_repr(self, indent=1)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 71, in serializer_repr
+    ret = field_repr(serializer, force_many) + ':'
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in field_repr
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 54, in <listcomp>
+    arg_string = ', '.join([smart_repr(val) for val in field._args])
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/utils/representation.py", line 33, in smart_repr
+    value = repr(value)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/base.py", line 580, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+TypeError: __str__ returned non-string (type ImageFieldFile)

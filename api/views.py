@@ -1,14 +1,13 @@
-import os
+import re
 
-from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from lib.utils.json_response import success
-from lib.utils.json_response import successHttpRequest
 from .models import Image
 from api.serializers import ImageSerializer
 
 from lib.manage.imageProcess import *
+
 
 # Create your views here.
 
@@ -47,10 +46,10 @@ class resize(APIView):
         # X,Y轴变化率
         zoomXValue = request.data.get("zoomXValue")
         zoomYValue = request.data.get("zoomYValue")
-        print(request)
         images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images)
-        filePath = serializer.data.get('file')
-        #调用处理函数
-        imageResize(zoomXValue,zoomYValue,filePath)
-        return success(serializer.data.get('file'))
+        serializer = ImageSerializer(images,context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file'])
+        # 调用处理函数
+        imageResize(zoomXValue, zoomYValue, path.group())
+        return success(serializer.data)

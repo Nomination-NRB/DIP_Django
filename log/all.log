@@ -699,3 +699,84 @@ INFO 2022-05-15 15:08:16,641 [MainThread:4332340608] [django.utils.autoreload:67
 INFO 2022-05-15 15:08:22,349 [Thread-1:6175830016] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 93
 INFO 2022-05-15 15:09:46,499 [Thread-2:6194376704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 131
 INFO 2022-05-15 15:09:51,522 [Thread-1:6175830016] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 93
+INFO 2022-05-15 15:13:24,212 [MainThread:4332340608] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 15:13:24,567 [MainThread:4305356160] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 15:18:02,919 [MainThread:4308878720] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 15:18:08,448 [Thread-1:6196326400] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 156
+INFO 2022-05-15 15:18:08,457 [Thread-2:6213152768] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/%E9%98%BF%E7%B1%B3%E5%A8%85%E4%BD%9C%E8%80%85%E6%9C%AA%E7%9F%A5.png HTTP/1.1" 200 3424
+INFO 2022-05-15 16:06:49,603 [MainThread:4308878720] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:06:49,899 [MainThread:4375446912] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:07:10,534 [Thread-1:6133772288] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 109
+INFO 2022-05-15 16:07:38,377 [MainThread:4312024448] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:11:11,464 [MainThread:4312024448] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:11:12,068 [MainThread:4308567424] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:11:19,877 [MainThread:4336240000] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:11:24,915 [Thread-5:6220607488] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 106594
+INFO 2022-05-15 16:11:35,888 [MainThread:4368516480] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:12:15,909 [MainThread:4368516480] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:12:16,555 [MainThread:4306797952] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:13:10,819 [MainThread:4306797952] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:13:11,480 [MainThread:4338582912] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:13:49,354 [MainThread:4338582912] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:13:50,035 [MainThread:4309370240] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:15:38,017 [MainThread:4309370240] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:15:45,672 [MainThread:4300195200] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:15:48,060 [Thread-1:6208040960] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 91142
+INFO 2022-05-15 16:15:55,648 [MainThread:4341859712] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:16:01,028 [Thread-5:6214955008] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 102803
+INFO 2022-05-15 16:16:11,038 [MainThread:4347053440] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:16:14,299 [Thread-5:6210105344] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 102803
+INFO 2022-05-15 16:16:33,688 [MainThread:4347053440] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:16:34,429 [MainThread:4308649344] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:16:55,014 [Thread-5:6248427520] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 102919
+INFO 2022-05-15 16:16:59,885 [MainThread:4304061824] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:17:08,260 [MainThread:4370187648] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:17:10,830 [Thread-5:6187642880] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 102919
+INFO 2022-05-15 16:17:22,329 [MainThread:4370187648] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:17:23,040 [MainThread:4380198272] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:17:51,741 [MainThread:4380198272] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:17:52,536 [MainThread:4302685568] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:17:54,364 [MainThread:4382852480] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:18:14,648 [MainThread:4311647616] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:18:18,174 [MainThread:4311647616] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:18:18,708 [MainThread:4335011200] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:19:28,436 [MainThread:4335011200] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:19:29,088 [MainThread:4309370240] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:19:37,890 [MainThread:4309370240] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:19:38,548 [MainThread:4374431104] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:19:55,488 [MainThread:4374431104] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:19:56,071 [MainThread:4300031360] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:20:56,793 [MainThread:4341564800] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:20:58,725 [Thread-1:6165491712] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 94952
+INFO 2022-05-15 16:22:16,630 [MainThread:4341564800] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 16:22:16,995 [MainThread:4343104896] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:22:21,157 [Thread-1:6164295680] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 113071
+INFO 2022-05-15 16:22:34,867 [MainThread:4343104896] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:22:35,120 [MainThread:4341335424] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:22:38,884 [Thread-1:6165426176] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 113049
+INFO 2022-05-15 16:22:59,041 [MainThread:4341335424] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py changed, reloading.
+INFO 2022-05-15 16:22:59,235 [MainThread:4347381120] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:23:01,336 [MainThread:4342220160] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:23:28,432 [Thread-5:6217248768] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 124710
+INFO 2022-05-15 16:23:35,379 [MainThread:4376511872] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:23:42,471 [MainThread:4342875520] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:23:54,529 [MainThread:4308518272] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:24:10,145 [MainThread:4377052544] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-15 16:24:13,483 [Thread-1:6129627136] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 113049
+INFO 2022-05-15 16:24:28,876 [MainThread:4377052544] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:24:29,153 [MainThread:4335240576] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:24:52,926 [MainThread:4335240576] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:24:53,098 [MainThread:4307240320] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:24:56,197 [MainThread:4307240320] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:24:56,390 [MainThread:4376937856] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:26:23,377 [MainThread:4376937856] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:26:23,676 [MainThread:4335928704] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:26:28,595 [Thread-1:6170079232] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 114
+INFO 2022-05-15 16:26:48,512 [MainThread:4335928704] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:26:48,761 [MainThread:4339090816] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:27:18,977 [MainThread:4339090816] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:27:19,213 [MainThread:4381410688] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:27:24,177 [Thread-1:6127136768] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 135
+INFO 2022-05-15 16:27:43,116 [MainThread:4381410688] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
+INFO 2022-05-15 16:27:43,284 [MainThread:4334388608] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 16:29:21,681 [Thread-1:6172553216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 130
