@@ -1,3 +1,5 @@
+import os
+
 from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
@@ -37,9 +39,14 @@ class ImageSet(ModelViewSet):
         return success(serializer.data)
 
 
-class ImageGetAll(APIView):
+class resize(APIView):
     def get(self, request):
-        print(request.query_params)
-        images = Image.objects.get(id=request.query_params.get('id'))
+        print(request.data)
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
         serializer = ImageSerializer(images)
+        # X,Y轴变化率
+        zoomXValue = request.data.get("zoomXValue")
+        zoomYValue = request.data.get("zoomYValue")
+        
         return success(serializer.data)
