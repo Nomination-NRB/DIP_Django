@@ -720,3 +720,391 @@ FileNotFoundError: [Errno 2] No such file or directory: 'http://127.0.0.1:8000/i
 WARNING 2022-05-15 13:40:30,364 [Thread-2:6221361152] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知.png
 WARNING 2022-05-15 13:41:17,690 [Thread-2:6173683712] [django.request:241] [log:log_response] [WARNING]- Not Found: /images/阿米娅作者未知_0HzVpr2.png
 WARNING 2022-05-15 13:50:54,056 [Thread-2:6146338816] [django.request:241] [log:log_response] [WARNING]- Not Found: /media/images/IMG_9634.JPG
+WARNING 2022-05-15 14:41:15,368 [Thread-1:6206582784] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-05-15 14:41:21,170 [Thread-1:6206582784] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/resize/1
+WARNING 2022-05-15 14:42:00,660 [Thread-3:6240235520] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/resize/
+WARNING 2022-05-15 14:42:08,811 [Thread-3:6240235520] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/resize/
+WARNING 2022-05-15 14:42:42,932 [Thread-1:6135820288] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/resize/
+ERROR 2022-05-15 14:42:53,742 [Thread-1:6201946112] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 47, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-15 14:43:39,365 [Thread-1:6201946112] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 47, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+WARNING 2022-05-15 14:43:43,254 [Thread-2:6218772480] [django.request:241] [log:log_response] [WARNING]- Not Found: /api/resize/1
+WARNING 2022-05-15 14:43:45,247 [Thread-2:6218772480] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/resize/
+ERROR 2022-05-15 14:43:59,714 [Thread-1:6201946112] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 47, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-15 14:44:36,651 [Thread-1:6127677440] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 50, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-15 14:44:51,390 [Thread-1:6209253376] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 51, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-15 14:46:06,521 [Thread-1:6325039104] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    resize(zoomXValue,zoomYValue,filePath)
+TypeError: __init__() takes 1 positional argument but 4 were given
+ERROR 2022-05-15 14:46:47,931 [Thread-1:6193360896] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 5, in imageResize
+    out = cv2.resize(filePath, (x, y))
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - src is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+ERROR 2022-05-15 14:48:10,456 [Thread-1:6192869376] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 5, in imageResize
+    out = cv2.resize(filePath, (x, y))
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - src is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+ERROR 2022-05-15 14:56:12,271 [Thread-1:6168752128] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    out = cv2.resize(filePath, (x, y))
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - src is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+ERROR 2022-05-15 14:59:53,433 [Thread-1:6174126080] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    out = cv2.resize(img, fx=x, fy=y)
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - resize() missing required argument 'dsize' (pos 2)
+>  - resize() missing required argument 'dsize' (pos 2)
+
+ERROR 2022-05-15 15:01:19,473 [Thread-1:6174912512] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_CUBIC)
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - Argument 'fx' can not be treated as a double
+>  - Argument 'fx' can not be treated as a double
+
+ERROR 2022-05-15 15:02:45,076 [Thread-5:6245642240] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_CUBIC)
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - Argument 'fx' can not be treated as a double
+>  - Argument 'fx' can not be treated as a double
+
+ERROR 2022-05-15 15:04:02,598 [Thread-5:6223392768] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    cv2.imshow('image', img)
+cv2.error: Unknown C++ exception from OpenCV code
+ERROR 2022-05-15 15:04:14,796 [Thread-5:6225686528] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    cv2.imshow('image', img)
+cv2.error: Unknown C++ exception from OpenCV code
+ERROR 2022-05-15 15:05:29,929 [Thread-5:6223867904] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 55, in post
+    imageResize(zoomXValue,zoomYValue,filePath)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/lib/manage/imageProcess.py", line 7, in imageResize
+    out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_LINEAR)
+cv2.error: OpenCV(4.5.5) :-1: error: (-5:Bad argument) in function 'resize'
+> Overload resolution failed:
+>  - Argument 'fx' can not be treated as a double
+>  - Argument 'fx' can not be treated as a double
+
