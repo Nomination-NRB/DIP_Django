@@ -8,6 +8,7 @@ from lib.utils.json_response import successHttpRequest
 from .models import Image
 from api.serializers import ImageSerializer
 
+from lib.manage.imageProcess import *
 
 # Create your views here.
 
@@ -48,5 +49,7 @@ class resize(APIView):
         # X,Y轴变化率
         zoomXValue = request.data.get("zoomXValue")
         zoomYValue = request.data.get("zoomYValue")
-        
-        return success(serializer.data)
+        filePath = serializer.data.get('file')
+        #调用处理函数
+        resize(zoomXValue,zoomYValue,filePath)
+        return success(serializer.data.get('file'))
