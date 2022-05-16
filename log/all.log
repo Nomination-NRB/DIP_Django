@@ -505,6 +505,7 @@ INFO 2022-05-15 12:57:13,795 [MainThread:4305175936] [django.utils.autoreload:26
 INFO 2022-05-15 12:57:13,993 [MainThread:4363814272] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-15 12:57:51,865 [MainThread:4363814272] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py changed, reloading.
 INFO 2022-05-15 12:57:52,138 [MainThread:4370072960] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-15 22:13:55,449 [MainThread:8232] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-15 13:04:16,082 [Thread-1:6132969472] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
 INFO 2022-05-15 13:10:09,377 [Thread-2:6132969472] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
 INFO 2022-05-15 13:14:57,426 [MainThread:4339746176] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
