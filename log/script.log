@@ -1519,3 +1519,103 @@ Traceback (most recent call last):
     out = cv2.resize(img,None, fx=x, fy=y,interpolation=cv2.INTER_LINEAR)
 cv2.error: OpenCV(4.5.5) /Users/xperience/actions-runner/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/resize.cpp:4052: error: (-215:Assertion failed) !ssize.empty() in function 'resize'
 
+ERROR 2022-05-15 17:25:22,154 [Thread-1:6130003968] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-16 00:35:46,676 [Thread-7:6130003968] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-16 00:36:18,610 [Thread-7:6130003968] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
+ERROR 2022-05-16 00:36:20,086 [Thread-7:6130003968] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/api/views.py", line 52, in post
+    images = Image.objects.get(id=request.data.get('id'))
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/key/PycharmProjects/python_dip_courseproject_django/venv/lib/python3.8/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+api.models.Image.DoesNotExist: Image matching query does not exist.
