@@ -57,3 +57,16 @@ class resize(APIView):
         imageResize(zoomXValue, zoomYValue, path)
         # 返回定制格式的JSON
         return success(serializer.data)
+
+class getHistArray(APIView):
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        # 调用处理函数
+        histArray = get_hist_array(path)
+        # 返回定制格式的JSON
+        return success(histArray)
