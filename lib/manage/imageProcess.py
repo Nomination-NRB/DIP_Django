@@ -40,7 +40,7 @@ def get_hist_dict(filePath):
     filepath = parse.unquote(filePath)
     img = cv2.imread(filepath)
     imgType = judge_img_type(img)
-    //cv2是显示bgr的
+    # cv2是显示bgr的
     hist_dict={'r':[],'g':[],'b':[],'gray':[]}
     if imgType == 'gray':
         hist_dict['gray'] = cv2.calcHist([img], [0], None, [256], [0, 256]).reshape(-1)
