@@ -967,3 +967,15 @@ INFO 2022-05-16 01:23:13,311 [Thread-3:6197112832] [django.server:187] [basehttp
 INFO 2022-05-16 01:23:13,341 [Thread-3:6197112832] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
 INFO 2022-05-16 01:23:43,048 [Thread-3:6197112832] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
 INFO 2022-05-16 01:23:43,082 [Thread-3:6197112832] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-19 03:29:46,049 [MainThread:4306601344] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-19 03:31:59,552 [MainThread:4306601344] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/urls.py changed, reloading.
+INFO 2022-05-19 03:32:03,714 [MainThread:4369335680] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-19 03:32:08,490 [MainThread:4369335680] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- /Users/key/PycharmProjects/python_dip_courseproject_django/api/urls.py changed, reloading.
+INFO 2022-05-19 03:32:09,712 [MainThread:4373153152] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-19 03:32:14,584 [MainThread:4373611904] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-19 03:32:18,433 [Thread-5:6184611840] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/getHistArray/ HTTP/1.1" 500 106908
+INFO 2022-05-19 03:33:06,914 [MainThread:4369122688] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-19 03:33:09,469 [Thread-5:6325039104] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/getHistArray/ HTTP/1.1" 500 106908
+ERROR 2022-05-19 03:33:11,582 [Thread-5:6325039104] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/getHistArray/ HTTP/1.1" 500 106908
+INFO 2022-05-19 03:33:44,373 [MainThread:4345365888] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-19 03:34:14,078 [MainThread:4311319936] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader

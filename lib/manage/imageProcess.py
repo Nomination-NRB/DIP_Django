@@ -2,8 +2,6 @@ import cv2
 
 from urllib import parse
 
-from python_dip_courseproject_django.settings import MEDIA_ROOT
-
 
 def imageResize(x, y, filePath):
     filePath = parse.unquote(filePath)
