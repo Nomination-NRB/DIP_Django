@@ -901,6 +901,7 @@ INFO 2022-05-15 17:21:12,145 [MainThread:4341646720] [django.utils.autoreload:26
 INFO 2022-05-15 17:21:12,836 [MainThread:4300932480] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-15 17:21:39,252 [MainThread:4378215808] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-15 17:21:41,254 [Thread-1:6130003968] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 164
+INFO 2022-05-17 10:39:07,132 [MainThread:25664] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 ERROR 2022-05-15 17:25:22,159 [Thread-1:6130003968] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 98328
 INFO 2022-05-15 17:25:24,680 [Thread-1:6130003968] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
 INFO 2022-05-15 17:25:28,000 [Thread-1:6130003968] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 131
