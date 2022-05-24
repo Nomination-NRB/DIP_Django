@@ -2,14 +2,6 @@ import cv2
 
 from urllib import parse
 
-
-def imageResize(x, y, filePath):
-    filePath = parse.unquote(filePath)
-    img = cv2.imread(filePath)
-    x = float(x)
-    y = float(y)
-    out = cv2.resize(img, None, fx=x, fy=y, interpolation=cv2.INTER_LINEAR)
-
 def judge_img_type(img):
     """
     判断图片类型
@@ -27,6 +19,32 @@ def judge_img_type(img):
     else:
         imgType = 'rgb'
     return imgType
+
+def opera(op,dict):
+    '''
+    参数:
+        op: 操作函数名 string op='zoom'
+        dict: 参数字典:dict {'Sx':1.5,'Sy':1.5,'filePath':'xxx.jpg'}
+        其中dict['filePath']为图片路径
+    '''
+    dict['filePath'] = parse.unquote(dict['filePath'])
+    paradict=dict.copy()
+    del paradict['filePath']
+    img = cv2.imread(dict['filePath'])
+    imgType = judge_img_type(img)
+    if imgType == 'gray':
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    out=eval(op)(img,**paradict)
+    cv2.imwrite(dict['filePath'], out)
+
+def imageResize(x, y, filePath):
+    filePath = parse.unquote(filePath)
+    img = cv2.imread(filePath)
+    x = float(x)
+    y = float(y)
+    out = cv2.resize(img, None, fx=x, fy=y, interpolation=cv2.INTER_LINEAR)
+    cv2.imwrite(filePath, out)
+
 
 def get_hist_dict(filePath):
     """
