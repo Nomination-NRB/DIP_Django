@@ -38,12 +38,13 @@ class ImageSet(ModelViewSet):
         self.perform_create(serializer)
         return success(serializer.data)
 
-
+#class_name url
 class resize(APIView):
     def post(self, request):
         # POST参数
         print(request.data)
 
+        function_name= request.data.get('function_name')
         # X,Y轴变化率
         zoomXValue = request.data.get("zoomXValue")
         zoomYValue = request.data.get("zoomYValue")
@@ -58,6 +59,7 @@ class resize(APIView):
         # 返回定制格式的JSON
         return success(serializer.data)
 
+#url
 class getHistArray(APIView):
     def post(self, request):
 
@@ -70,3 +72,62 @@ class getHistArray(APIView):
         histArray = get_hist_array(path)
         # 返回定制格式的JSON
         return success(histArray)
+class reverseChange(APIView):
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        # 调用处理函数
+        opera('reverse', path)
+        # 返回定制格式的JSON
+        return success(serializer.data)
+#class_name->url
+class linearChange(APIView):
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        # dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('gray_three_linear_trans', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+#class_name->url
+class linearChange(APIView):
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        # dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('gray_three_linear_trans', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
