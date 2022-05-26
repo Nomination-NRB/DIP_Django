@@ -279,3 +279,88 @@ def gaussian(img,ksize=3,sigma=0):
         sigma=ksize/2
     return cv2.GaussianBlur(img,(ksize,ksize),sigma)
 
+#基本图像操作
+def shift_img(img, x, y):
+    '''
+    图像平移
+
+    参数:
+        img:图像
+        x:x轴平移量
+        y:y轴平移量
+    返回值:
+        平移后的图像
+    '''
+    M = np.float32([[1, 0, x], [0, 1, y]])
+    shifted = cv2.warpAffine(img, M, (img.shape[1], img.shape[0]))
+    return shifted
+
+def rotate(img, angle, x_center=0.5, y_center=0.5, scale=1):
+    '''
+    图像旋转
+
+    参数:
+        img:图像
+        angle:旋转角度
+        x_center:x轴中心比例
+        y_center:y轴中心比例
+        scale:缩放比例
+    返回值:
+        旋转后的图像
+    '''
+    h, w = img.shape[:2]
+    center = (x_center * w, y_center * h)
+    M = cv2.getRotationMatrix2D(center, angle, scale)
+    rotated = cv2.warpAffine(img, M, (w, h))
+    return rotated
+
+#基本灰度变换
+# 对数变换
+def log(img,c=1):
+    return c*np.log(1.0+img)
+def flip(image,x_flip=False,y_flip=False):
+    '''
+    图像翻转
+
+    参数:
+        image:图像
+        x_flip:x轴翻转
+        y_flip:y轴翻转
+    返回值:
+        翻转后的图像
+    '''
+    if x_flip:
+        image=cv2.flip(image,0)
+    if y_flip:
+        image=cv2.flip(image,1)
+    return image
+
+# 图像复原
+def motionBlur(image,angle, dist,eps):
+    shape=image.shape
+    xCenter = (shape[0] - 1) / 2
+    yCenter = (shape[1] - 1) / 2
+    sinVal = np.sin(angle * np.pi / 180)
+    cosVal = np.cos(angle * np.pi / 180)
+    PSF = np.zeros(shape)
+    for i in range(dist):
+        xOffset = round(sinVal * i)
+        yOffset = round(cosVal * i)
+        PSF[int(xCenter - xOffset), int(yCenter + yOffset)] = 1
+    PSF= PSF / PSF.sum()
+    fftImg = np.fft.fft2(image)  # 进行二维数组的傅里叶变换
+    fftPSF = np.fft.fft2(PSF) + eps
+    fftBlur = np.fft.ifft2(fftImg * fftPSF)
+    fftBlur = np.abs(np.fft.fftshift(fftBlur))
+    return fftBlur
+
+def wienerFilter(img,PSF=None,eps=0,K=0):
+    fftImg = np.fft.fft2(img)
+    if PSF.all==None:
+        return np.abs(np.fft.ifft2(fftImg-K))
+    else:
+        fftPSF = np.fft.fft2(PSF) + eps
+    fftWiener = np.conj(fftPSF) / (np.abs(fftPSF)**2 + K)
+    imgWienerFilter = np.fft.ifft2(fftImg * fftWiener)
+    imgWienerFilter = np.abs(np.fft.fftshift(imgWienerFilter))
+    return imgWienerFilter
