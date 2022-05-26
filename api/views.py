@@ -55,6 +55,11 @@ class resize(APIView):
 
         path = re.search(r'media/(.*)', serializer.data['file']).group()
         # 调用处理函数
+        # dict={}
+        # dict['filepath']=path
+        # dict['Sx']=zoomXValue
+        # dict['Sy']=zoomYValue
+        # opera('imageResize',dict)
         imageResize(zoomXValue, zoomYValue, path)
         # 返回定制格式的JSON
         return success(serializer.data)
