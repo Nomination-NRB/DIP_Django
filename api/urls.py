@@ -12,4 +12,6 @@ urlpatterns = [
     path('resize/', views.resize.as_view(), name='resize'),
     path('', views.index.as_view(), name='index'),
 ]
+
+
 urlpatterns += router.urls  # 将路由器中的所以路由信息追到到django的路由列表中

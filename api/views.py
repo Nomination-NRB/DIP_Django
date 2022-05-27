@@ -1,12 +1,17 @@
-import re
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','python_dip_courseproject_django.settings')
+django.setup()
+# 以上是zeho加的环境变量
 
+import re
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from lib.utils.json_response import success
-from .models import Image
+from lib.manage.imageProcess import *
+from api.models import Image
 from api.serializers import ImageSerializer
 
-from lib.manage.imageProcess import *
 
 
 # Create your views here.
