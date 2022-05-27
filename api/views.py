@@ -44,7 +44,7 @@ class ImageSet(ModelViewSet):
         return success(serializer.data)
 
 #class_name url
-class resize(APIView):
+class resize(APIView):     #放大/缩小
     def post(self, request):
         # POST参数
         print(request.data)
@@ -82,7 +82,7 @@ class getHistArray(APIView):
         histArray = get_hist_dict(path)
         # 返回定制格式的JSON
         return success(histArray)
-class reverseChange(APIView):
+class reverseChange(APIView):    #反色变换
     def post(self, request):
 
         # 获取图片
@@ -97,31 +97,31 @@ class reverseChange(APIView):
         # 返回定制格式的JSON
         return success(serializer.data)
 #class_name->url
-class linearChange(APIView):
-    def post(self, request):
-
-        # 获取图片
-        images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images, context={'request': request})
-
-        path = re.search(r'media/(.*)', serializer.data['file']).group()
-        #以上为复制粘贴操作
-
-        # 调用处理函数
-        dict={}
-        # dict['filepath']=path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
-
-        opera('gray_three_linear_trans', dict)
-        #以下也是复制粘贴
-        # 返回定制格式的JSON
-        return success(serializer.data)
+# class linearChange(APIView):
+#     def post(self, request):
+#
+#         # 获取图片
+#         images = Image.objects.get(id=request.data.get('id'))
+#         serializer = ImageSerializer(images, context={'request': request})
+#
+#         path = re.search(r'media/(.*)', serializer.data['file']).group()
+#         #以上为复制粘贴操作
+#
+#         # 调用处理函数
+#         dict={}
+#         # dict['filepath']=path
+#         # dict['a']=request.data.get('a')
+#         # dict['b']=request.data.get('b')
+#         # dict['c']=request.data.get('c')
+#         # dict['d']=request.data.get('d')
+#
+#         opera('gray_three_linear_trans', dict)
+#         #以下也是复制粘贴
+#         # 返回定制格式的JSON
+#         return success(serializer.data)
 
 #class_name->url
-class linearChange(APIView):
+class linearChange(APIView):  #分段线性变化
     def post(self, request):
 
         # 获取图片
@@ -147,7 +147,7 @@ class linearChange(APIView):
         return success(serializer.data)
 
 #class_name->url
-class contrast(APIView):
+class contrast(APIView):  #对比度拉伸
     def post(self, request):
 
         # 获取图片
@@ -171,7 +171,7 @@ class contrast(APIView):
         return success(serializer.data)
 
 #class_name->url
-class rotate(APIView):
+class rotate(APIView):   #旋转
     def post(self, request):
 
         # 获取图片
@@ -193,7 +193,7 @@ class rotate(APIView):
         return success(serializer.data)
 
 #class_name->url
-class translate(APIView):
+class translate(APIView):   #平移
     def post(self, request):
 
         # 获取图片
@@ -217,7 +217,7 @@ class translate(APIView):
         return success(serializer.data)
 
 #class_name->url
-class logChange(APIView):
+class logChange(APIView):   #对数变换
     def post(self, request):
 
         # 获取图片
@@ -241,7 +241,7 @@ class logChange(APIView):
         return success(serializer.data)
 
 #class_name->url
-class reversal(APIView):
+class reversal(APIView):  #翻转
     def post(self, request):
 
         # 获取图片
@@ -265,7 +265,7 @@ class reversal(APIView):
         return success(serializer.data)
 
 #class_name->url
-class gammaChange(APIView):
+class gammaChange(APIView):   #幂次变换
     def post(self, request):
 
         # 获取图片
@@ -288,7 +288,7 @@ class gammaChange(APIView):
         return success(serializer.data)
 
 #class_name->url
-class histogramToBalance(APIView):
+class histogramToBalance(APIView):   #直方图均衡化
     def post(self, request):
 
         # 获取图片
@@ -310,9 +310,33 @@ class histogramToBalance(APIView):
         #以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
+#class_name->url
+class histogramToOne(APIView):   #直方图归一化
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
 
 #class_name->url
-class addSaltPepper(APIView):
+class addSaltPepper(APIView):  #椒盐噪声
     def post(self, request):
 
         # 获取图片
@@ -337,7 +361,7 @@ class addSaltPepper(APIView):
         return success(serializer.data)
 
 #class_name->url
-class addGaussian(APIView):
+class addGaussian(APIView):   #高斯噪声
     def post(self, request):
 
         # 获取图片
@@ -361,7 +385,7 @@ class addGaussian(APIView):
         return success(serializer.data)
 
 #class_name->url
-class motion(APIView):
+class motion(APIView):   #Motion/Disk模糊操作
     def post(self, request):
 
         # 获取图片
@@ -385,7 +409,7 @@ class motion(APIView):
         return success(serializer.data)
 
 #class_name->url
-class wiener(APIView):
+class wiener(APIView):   #维纳滤波
     def post(self, request):
 
         # 获取图片
@@ -409,7 +433,31 @@ class wiener(APIView):
         return success(serializer.data)
 
 #class_name->url
-class selfMedian(APIView):
+class smooth(APIView):   #平滑约束复原
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+#class_name->url
+class selfMedian(APIView):   #自适应中值滤波
     def post(self, request):
 
         # 获取图片
@@ -433,7 +481,7 @@ class selfMedian(APIView):
         return success(serializer.data)
 
 #class_name->url
-class selfMean(APIView):
+class selfMean(APIView):   #自适应均值滤波
     def post(self, request):
 
         # 获取图片
@@ -457,7 +505,7 @@ class selfMean(APIView):
         return success(serializer.data)
 
 #class_name->url
-class filter(APIView):
+class filter(APIView):   #平滑滤波（中值/均值）
     def post(self, request):
 
         # 获取图片
@@ -476,6 +524,100 @@ class filter(APIView):
         # dict['d']=request.data.get('d')
 
         opera('median_blur', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+class sharpen(APIView):   #锐化滤波
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+
+class fft(APIView):   #傅里叶变换
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+
+class lowFilter(APIView):   #低通滤波
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+class highFilter(APIView):   #高通滤波
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+
+        opera('#zeho', dict)
         #以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
