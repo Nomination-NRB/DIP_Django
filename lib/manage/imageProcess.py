@@ -336,7 +336,7 @@ def flip(image,x_flip=False,y_flip=False):
     return image
 
 # 图像复原
-def motionBlur(image,angle, dist,eps):
+def motionBlur(image,angle, dist,eps=1e-6):
     shape=image.shape
     xCenter = (shape[0] - 1) / 2
     yCenter = (shape[1] - 1) / 2
