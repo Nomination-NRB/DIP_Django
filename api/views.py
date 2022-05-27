@@ -74,7 +74,7 @@ class getHistArray(APIView):
 
         path = re.search(r'media/(.*)', serializer.data['file']).group()
         # 调用处理函数
-        histArray = get_hist_array(path)
+        histArray = get_hist_dict(path)
         # 返回定制格式的JSON
         return success(histArray)
 class reverseChange(APIView):

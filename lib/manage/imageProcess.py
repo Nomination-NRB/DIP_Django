@@ -27,15 +27,15 @@ def opera(op,dict):
         dict: 参数字典:dict {'Sx':1.5,'Sy':1.5,'filepath':'xxx.jpg'}
         其中dict['filepath']为图片路径
     '''
-    dict['filePath'] = parse.unquote(dict['filePath'])
+    dict['filepath'] = parse.unquote(dict['filepath'])
     paradict=dict.copy()
-    del(paradict['filePath'])
-    img = cv2.imread(dict['filePath'])
+    del(paradict['filepath'])
+    img = cv2.imread(dict['filepath'])
     imgType = judge_img_type(img)
     if imgType == 'gray':
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     out=eval(op)(img,**paradict)
-    cv2.imwrite(dict['filePath'], out)
+    cv2.imwrite(dict['filepath'], out)
 
 def imageResize(Sx, Sy, filePath):
     filePath = parse.unquote(filePath)
