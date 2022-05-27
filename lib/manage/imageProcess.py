@@ -29,13 +29,13 @@ def opera(op,dict):
     '''
     dict['filePath'] = parse.unquote(dict['filePath'])
     paradict=dict.copy()
-    del(paradict['filePath'])
-    img = cv2.imread(dict['filePath'])
+    del(paradict['filepath'])
+    img = cv2.imread(dict['filepath'])
     imgType = judge_img_type(img)
     if imgType == 'gray':
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     out=eval(op)(img,**paradict)
-    cv2.imwrite(dict['filePath'], out)
+    cv2.imwrite(dict['filepath'], out)
 
 def imageResize(Sx, Sy, filePath):
     filePath = parse.unquote(filePath)
