@@ -40,11 +40,10 @@ def opera(op,dict):
 def imageResize(Sx, Sy, filePath):
     filePath = parse.unquote(filePath)
     img = cv2.imread(filePath)
-    x = float(x)
-    y = float(y)
+    x = float(Sx)
+    y = float(Sy)
     out = cv2.resize(img, None, fx=x, fy=y, interpolation=cv2.INTER_LINEAR)
     cv2.imwrite(filePath, out)
-
 
 def get_hist_dict(filePath):
     """
