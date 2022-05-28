@@ -10,7 +10,6 @@ router.register('ImageSet', views.ImageSet)  # 向路由器中注册视图集
 urlpatterns = [
     path('getHistArray/', views.getHistArray.as_view(), name='getHistArray'),
     path('resize/', views.resize.as_view(), name='resize'),
-    path('ImageSet/', views.ImageSet.as_view(), name='ImageSet'),
     path('reverseChange/', views.reverseChange.as_view(), name='reverseChange'),
     path('linearChange/', views.linearChange.as_view(), name='linearChange'),
     path('contrast/', views.contrast.as_view(), name='contrast'),
