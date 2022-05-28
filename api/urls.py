@@ -10,7 +10,6 @@ router.register('ImageSet', views.ImageSet)  # 向路由器中注册视图集
 urlpatterns = [
     path('getHistArray/', views.getHistArray.as_view(), name='getHistArray'),
     path('resize/', views.resize.as_view(), name='resize'),
-    path('rotate/', views.rotate.as_view(), name='rotate'),
     path('', views.index.as_view(), name='index'),
 ]
 urlpatterns += router.urls  # 将路由器中的所以路由信息追到到django的路由列表中
