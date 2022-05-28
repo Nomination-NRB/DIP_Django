@@ -44,44 +44,44 @@ class ImageSet(ModelViewSet):
         return success(serializer.data)
 
 #class_name url
-class resize(APIView):     #放大/缩小
-    def post(self, request):
-        # POST参数
-        print(request.data)
-
-        function_name= request.data.get('function_name')
-        # X,Y轴变化率
-        zoomXValue = request.data.get("zoomXValue")
-        zoomYValue = request.data.get("zoomYValue")
-
-        # 获取图片
-        images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images, context={'request': request})
-
-        path = re.search(r'media/(.*)', serializer.data['file']).group()
-        # 调用处理函数
-        # dict={}
-        # dict['filepath']=path
-        # dict['Sx']=zoomXValue
-        # dict['Sy']=zoomYValue
-        # opera('imageResize',dict)
-        imageResize(zoomXValue, zoomYValue, path)
-        # 返回定制格式的JSON
-        return success(serializer.data)
-
-#url
-class getHistArray(APIView):
-    def post(self, request):
-
-        # 获取图片
-        images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images, context={'request': request})
-
-        path = re.search(r'media/(.*)', serializer.data['file']).group()
-        # 调用处理函数
-        histArray = get_hist_dict(path)
-        # 返回定制格式的JSON
-        return success(histArray)
+# class resize(APIView):     #放大/缩小
+#     def post(self, request):
+#         # POST参数
+#         print(request.data)
+#
+#         function_name= request.data.get('function_name')
+#         # X,Y轴变化率
+#         zoomXValue = request.data.get("zoomXValue")
+#         zoomYValue = request.data.get("zoomYValue")
+#
+#         # 获取图片
+#         images = Image.objects.get(id=request.data.get('id'))
+#         serializer = ImageSerializer(images, context={'request': request})
+#
+#         path = re.search(r'media/(.*)', serializer.data['file']).group()
+#         # 调用处理函数
+#         # dict={}
+#         # dict['filepath']=path
+#         # dict['Sx']=zoomXValue
+#         # dict['Sy']=zoomYValue
+#         # opera('imageResize',dict)
+#         imageResize(zoomXValue, zoomYValue, path)
+#         # 返回定制格式的JSON
+#         return success(serializer.data)
+#
+# #url
+# class getHistArray(APIView):
+#     def post(self, request):
+#
+#         # 获取图片
+#         images = Image.objects.get(id=request.data.get('id'))
+#         serializer = ImageSerializer(images, context={'request': request})
+#
+#         path = re.search(r'media/(.*)', serializer.data['file']).group()
+#         # 调用处理函数
+#         histArray = get_hist_dict(path)
+#         # 返回定制格式的JSON
+#         return success(histArray)
 class reverseChange(APIView):    #反色变换
     def post(self, request):
 
@@ -169,6 +169,29 @@ class contrast(APIView):  #对比度拉伸
         #以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
+#class_name->url
+class resize(APIView):   #改变大小
+    def post(self, request):
+
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        #以上为复制粘贴操作
+
+        # 调用处理函数
+        dict={}
+        dict['filepath']=path
+        dict['Sx']=request.data.get('zoomXValue')
+        dict['Sy']=request.data.get('zoomYValue')
+
+        opera('imageResize', dict)
+        #以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+
 
 #class_name->url
 class rotate(APIView):   #旋转
