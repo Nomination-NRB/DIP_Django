@@ -43,13 +43,11 @@ class ImageSet(ModelViewSet):
         self.perform_create(serializer)
         return success(serializer.data)
 
-#class_name url
+# class_name url
 class resize(APIView):     #放大/缩小
     def post(self, request):
         # POST参数
-        print(request.data)
-
-        function_name= request.data.get('function_name')
+        # print(request.data)
         # X,Y轴变化率
         zoomXValue = request.data.get("zoomXValue")
         zoomYValue = request.data.get("zoomYValue")
@@ -69,32 +67,7 @@ class resize(APIView):     #放大/缩小
         # 返回定制格式的JSON
         return success(serializer.data)
 
-
-# #class_name->url
-# class resize(APIView):   #改变大小
-#     def post(self, request):
-#
-#         # 获取图片
-#         images = Image.objects.get(id=request.data.get('id'))
-#         serializer = ImageSerializer(images, context={'request': request})
-#
-#         path = re.search(r'media/(.*)', serializer.data['file']).group()
-#         #以上为复制粘贴操作
-#
-#         # 调用处理函数
-#         dict={}
-#         dict['filepath']=path
-#         dict['Sx']=request.data.get('zoomXValue')
-#         dict['Sy']=request.data.get('zoomYValue')
-#
-#         opera('imageResize', dict)
-#         #以下也是复制粘贴
-#         # 返回定制格式的JSON
-#         return success(serializer.data)
-#
-
-
-url
+# url
 class getHistArray(APIView):
     def post(self, request):
 
@@ -121,29 +94,6 @@ class reverseChange(APIView):    #反色变换
         opera('reverse', dict)
         # 返回定制格式的JSON
         return success(serializer.data)
-#class_name->url
-# class linearChange(APIView):
-#     def post(self, request):
-#
-#         # 获取图片
-#         images = Image.objects.get(id=request.data.get('id'))
-#         serializer = ImageSerializer(images, context={'request': request})
-#
-#         path = re.search(r'media/(.*)', serializer.data['file']).group()
-#         #以上为复制粘贴操作
-#
-#         # 调用处理函数
-#         dict={}
-#         # dict['filepath']=path
-#         # dict['a']=request.data.get('a')
-#         # dict['b']=request.data.get('b')
-#         # dict['c']=request.data.get('c')
-#         # dict['d']=request.data.get('d')
-#
-#         opera('gray_three_linear_trans', dict)
-#         #以下也是复制粘贴
-#         # 返回定制格式的JSON
-#         return success(serializer.data)
 
 #class_name->url
 class linearChange(APIView):  #分段线性变化
@@ -209,6 +159,7 @@ class rotate(APIView):   #旋转
 
         # 调用处理函数
         # rotateValue
+        # angle
         dict={}
         dict['filepath']=path
         dict['angle']=request.data.get('rotateValue')
@@ -278,14 +229,16 @@ class reversal(APIView):  #翻转
         #以上为复制粘贴操作
 
         # 调用处理函数
-        # spinXVaue、spinYVaue
+        # spinXYVaue
         # x_flip、y_flip
-        dict={}
-        dict['filepath']=path
-        dict['x_flip']=request.data.get('spinXVaue')
-        dict['y_flip']=request.data.get('spinYVaue')
-
-        opera('flip', dict)
+        # dict={}
+        # dict['filepath']=path
+        # temp=request.data.get('spinXYVaue')
+        # if temp=='X':
+        #     dict['x_flip']=True
+        # if temp=='Y':
+        #     dict['y_flip']=True
+        # opera('flip', dict)
         #以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

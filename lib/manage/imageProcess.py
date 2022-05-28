@@ -40,11 +40,10 @@ def opera(op,dict):
 def imageResize(Sx, Sy, filePath):
     filePath = parse.unquote(filePath)
     img = cv2.imread(filePath)
-    x = float(x)
-    y = float(y)
+    x=Sx
+    y=Sy
     out = cv2.resize(img, None, fx=x, fy=y, interpolation=cv2.INTER_LINEAR)
     cv2.imwrite(filePath, out)
-
 
 def get_hist_dict(filePath):
     """
@@ -99,7 +98,7 @@ def gray_three_linear_trans(input, a, b, c=0, d=255):
     把[a,b]灰度拓展到[c,d]
     '''
     if a == b or b == 255:
-        return None
+        return input
     #得到掩码
     m1 = (input < a)
     m2 = (a <= input) & (input <= b)
