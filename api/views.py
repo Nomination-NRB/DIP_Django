@@ -159,6 +159,7 @@ class rotate(APIView):   #旋转
 
         # 调用处理函数
         # rotateValue
+        # angle
         dict={}
         dict['filepath']=path
         dict['angle']=request.data.get('rotateValue')
@@ -228,14 +229,16 @@ class reversal(APIView):  #翻转
         #以上为复制粘贴操作
 
         # 调用处理函数
-        # spinXVaue、spinYVaue
+        # spinXYVaue
         # x_flip、y_flip
-        dict={}
-        dict['filepath']=path
-        dict['x_flip']=request.data.get('spinXVaue')
-        dict['y_flip']=request.data.get('spinYVaue')
-
-        opera('flip', dict)
+        # dict={}
+        # dict['filepath']=path
+        # temp=request.data.get('spinXYVaue')
+        # if temp=='X':
+        #     dict['x_flip']=True
+        # if temp=='Y':
+        #     dict['y_flip']=True
+        # opera('flip', dict)
         #以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
