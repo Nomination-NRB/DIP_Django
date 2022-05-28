@@ -980,3 +980,31 @@ ERROR 2022-05-19 03:33:09,469 [Thread-5:6325039104] [django.server:187] [basehtt
 ERROR 2022-05-19 03:33:11,582 [Thread-5:6325039104] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/getHistArray/ HTTP/1.1" 500 106908
 INFO 2022-05-19 03:33:44,373 [MainThread:4345365888] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-05-19 03:34:14,078 [MainThread:4311319936] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:23:09,740 [MainThread:10792] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:23:40,478 [MainThread:23740] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:26:01,810 [MainThread:20080] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:26:59,220 [Thread-1:16740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 01:27:09,581 [Thread-2:19564] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 01:27:09,611 [Thread-2:19564] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-05-28 01:27:09,627 [Thread-3:21428] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/warma_happy.jpg HTTP/1.1" 200 350846
+INFO 2022-05-28 01:27:09,723 [Thread-2:19564] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4621
+INFO 2022-05-28 01:27:29,991 [Thread-4:10776] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 01:27:34,710 [Thread-5:12048] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 112
+INFO 2022-05-28 01:27:34,978 [Thread-6:9828] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/warma_happy_5kKFgEh.jpg HTTP/1.1" 200 350846
+INFO 2022-05-28 01:27:35,065 [Thread-5:12048] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4621
+INFO 2022-05-28 01:27:43,702 [Thread-7:14400] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+ERROR 2022-05-28 01:27:43,836 [Thread-7:14400] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 99542
+INFO 2022-05-28 01:28:09,419 [Thread-8:3748] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 01:28:45,028 [MainThread:20080] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\76608\Desktop\dmp_course-project\api\urls.py changed, reloading.
+INFO 2022-05-28 01:28:46,489 [MainThread:16264] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:29:08,483 [MainThread:16264] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\76608\Desktop\dmp_course-project\api\urls.py changed, reloading.
+INFO 2022-05-28 01:29:09,437 [MainThread:8532] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 01:29:18,809 [Thread-1:11444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 112
+INFO 2022-05-28 01:29:19,141 [Thread-2:13488] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/warma_happy_AieJgfZ.jpg HTTP/1.1" 200 350846
+INFO 2022-05-28 01:29:19,283 [Thread-1:11444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4621
+INFO 2022-05-28 01:29:26,951 [Thread-3:15484] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/rotate/ HTTP/1.1" 200 0
+INFO 2022-05-28 01:29:27,049 [Thread-3:15484] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 112
+INFO 2022-05-28 01:29:27,122 [Thread-3:15484] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4652
+INFO 2022-05-28 01:29:31,087 [Thread-4:15480] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/warma_happy_AieJgfZ.jpg HTTP/1.1" 200 165261
+WARNING 2022-05-28 01:29:31,342 [Thread-4:15480] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2364
+INFO 2022-05-28 09:14:19,092 [MainThread:23052] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader

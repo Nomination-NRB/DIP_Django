@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/media/images" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (venv) " jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (DIP)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="django" />
   </component>
