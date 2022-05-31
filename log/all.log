@@ -1074,3 +1074,552 @@ INFO 2022-05-28 15:45:39,716 [Thread-2:880] [django.server:187] [basehttp:log_me
 INFO 2022-05-28 15:45:39,910 [Thread-1:21084] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_Twtb7Ht.jpg HTTP/1.1" 200 9055
 INFO 2022-05-28 15:45:39,929 [Thread-2:880] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
 INFO 2022-05-28 15:45:44,574 [Thread-2:880] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:36:10,852 [MainThread:17612] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 21:36:52,779 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:36:56,172 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 21:36:56,351 [Thread-2:20412] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_JFKzEC0.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 21:36:56,365 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-05-28 21:36:56,390 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 21:37:00,682 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+INFO 2022-05-28 21:37:00,699 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 21:37:00,721 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4604
+INFO 2022-05-28 21:37:00,838 [Thread-2:20412] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_JFKzEC0.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 44520
+INFO 2022-05-28 21:37:03,540 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 21:37:03,576 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4946
+INFO 2022-05-28 21:39:29,700 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 21:39:29,786 [Thread-1:26056] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 5379
+INFO 2022-05-28 21:42:48,442 [MainThread:17612] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 21:42:49,466 [MainThread:26180] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 21:45:42,546 [Thread-1:24108] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:45:42,897 [Thread-1:24108] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:49:41,904 [Thread-1:24108] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:49:54,512 [MainThread:26180] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 21:49:55,869 [MainThread:3856] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 21:50:02,693 [Thread-1:30020] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 21:50:07,271 [Thread-1:30020] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 21:50:07,551 [Thread-2:23044] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_azHSRMR.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 21:50:07,562 [Thread-1:30020] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-05-28 21:50:07,607 [Thread-1:30020] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:05:56,482 [MainThread:3856] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:05:57,926 [MainThread:29952] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:08:19,814 [MainThread:29952] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:08:20,911 [MainThread:9616] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:08:34,775 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:08:40,492 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:08:40,745 [Thread-2:10252] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_ewFLJxl.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:08:40,775 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:08:42,286 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/rotate/ HTTP/1.1" 200 0
+INFO 2022-05-28 22:08:42,319 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:08:42,342 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4335
+INFO 2022-05-28 22:08:42,474 [Thread-2:10252] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_ewFLJxl.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+INFO 2022-05-28 22:08:45,536 [Thread-2:10252] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_ewFLJxl.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+WARNING 2022-05-28 22:08:45,997 [Thread-2:10252] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2364
+INFO 2022-05-28 22:09:05,727 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:09:10,315 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:09:10,551 [Thread-2:10252] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_szDcpQU.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:09:10,570 [Thread-1:21652] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:09:58,991 [MainThread:26772] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:10:05,978 [Thread-1:23088] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:10:09,450 [Thread-1:23088] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:10:09,679 [Thread-2:17776] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_DRNaC2K.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:10:09,724 [Thread-1:23088] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:13:38,372 [MainThread:26772] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:13:39,489 [MainThread:18516] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:14:45,250 [Thread-1:27236] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:15:04,960 [MainThread:18516] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:15:06,008 [MainThread:6664] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:15:18,593 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:15:18,879 [Thread-2:12844] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_672iaIH.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:15:18,915 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:15:27,442 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+INFO 2022-05-28 22:15:27,472 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:15:27,506 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4565
+INFO 2022-05-28 22:15:27,661 [Thread-2:12844] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_672iaIH.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 38577
+INFO 2022-05-28 22:15:33,944 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:15:33,971 [Thread-1:29476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4544
+INFO 2022-05-28 22:17:36,641 [MainThread:6664] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:17:37,808 [MainThread:17672] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:17:40,833 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:17:48,191 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:17:48,535 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_COw26tW.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:17:48,581 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:18:28,811 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:18:36,594 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:18:36,889 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_dQJtJOK.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:18:36,917 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:20:49,613 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:22:18,968 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:22:19,193 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_XRH89dL.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:22:19,211 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:23:24,472 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:23:28,033 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:23:28,288 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_Z8JmIZI.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:23:28,308 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:23:55,478 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:23:59,729 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:23:59,956 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_N17cLke.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:23:59,978 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:26:50,925 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:26:50,952 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4335
+INFO 2022-05-28 22:26:51,116 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_N17cLke.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+INFO 2022-05-28 22:26:53,994 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:26:54,022 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4630
+INFO 2022-05-28 22:27:04,055 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:27:04,089 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4921
+INFO 2022-05-28 22:27:07,870 [Thread-2:25840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_N17cLke.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 126688
+INFO 2022-05-28 22:31:21,898 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:32:55,054 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:32:55,270 [Thread-3:24416] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_zK6VAhK.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:32:55,296 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:33:16,736 [Thread-1:29740] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:33:39,821 [MainThread:17672] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:33:41,346 [MainThread:30412] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:33:43,143 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:33:43,404 [Thread-2:9840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_akwnpz9.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:33:43,448 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:33:52,037 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:34:08,568 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:34:08,867 [Thread-2:9840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_HUT0VAU.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:34:08,892 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:34:34,843 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:34:40,471 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:34:40,744 [Thread-2:9840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_1jnSgJD.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:34:40,774 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:34:50,525 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:34:58,886 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:34:59,171 [Thread-2:9840] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_mqiAZKE.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:34:59,199 [Thread-1:21208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:37:13,161 [MainThread:30412] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:37:14,290 [MainThread:16748] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:37:17,998 [Thread-1:24208] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:37:23,695 [Thread-1:24208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:37:24,014 [Thread-2:17800] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_aEEaM6C.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:37:24,061 [Thread-1:24208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:37:43,015 [Thread-1:24208] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:38:10,977 [MainThread:16748] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 22:38:12,046 [MainThread:21320] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:38:16,796 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:38:19,908 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:38:20,108 [Thread-2:29288] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_vYsDXiY.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:38:20,140 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:38:23,615 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:38:23,640 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4761
+INFO 2022-05-28 22:38:23,783 [Thread-2:29288] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_vYsDXiY.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 59995
+INFO 2022-05-28 22:38:26,852 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:38:26,919 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 5231
+INFO 2022-05-28 22:38:34,854 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:38:35,539 [Thread-1:25156] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 6066
+INFO 2022-05-28 22:38:49,415 [MainThread:22788] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:38:53,670 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:38:57,031 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:38:57,258 [Thread-2:23704] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_2PIfdRj.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:38:57,293 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:39:01,014 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:39:01,053 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4745
+INFO 2022-05-28 22:39:01,199 [Thread-2:23704] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_2PIfdRj.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 58566
+INFO 2022-05-28 22:39:03,586 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:39:03,659 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 5276
+INFO 2022-05-28 22:40:04,986 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:40:05,799 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 6116
+INFO 2022-05-28 22:40:12,638 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:40:13,453 [Thread-1:864] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 6032
+INFO 2022-05-28 22:45:30,201 [MainThread:22788] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:45:31,667 [MainThread:27192] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:45:36,915 [Thread-1:25648] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:45:40,137 [Thread-1:25648] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:45:40,381 [Thread-2:27184] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_jhnjoZu.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:45:40,409 [Thread-1:25648] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-28 22:45:42,696 [Thread-1:25648] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/resize/ HTTP/1.1" 500 103520
+INFO 2022-05-28 22:47:15,726 [MainThread:27192] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:47:16,906 [MainThread:19972] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 22:47:20,269 [Thread-1:27884] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 22:47:27,994 [Thread-1:27884] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:47:28,237 [Thread-2:13488] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_WIdsDKv.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 22:47:28,268 [Thread-1:27884] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 22:47:31,901 [Thread-1:27884] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 22:47:31,928 [Thread-1:27884] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4703
+INFO 2022-05-28 22:47:32,077 [Thread-2:13488] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_WIdsDKv.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 52889
+INFO 2022-05-28 22:48:45,779 [MainThread:19972] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 22:48:46,941 [MainThread:9304] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:09:10,584 [MainThread:9304] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:09:11,489 [MainThread:17356] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:09:44,361 [MainThread:17356] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:09:45,407 [MainThread:28272] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:15:20,663 [MainThread:18476] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:15:26,692 [Thread-1:30120] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:15:26,915 [Thread-2:11732] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_LfhpvBF.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:15:26,928 [Thread-1:30120] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-05-28 23:15:26,950 [Thread-1:30120] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:15:33,983 [Thread-1:30120] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/translate/ HTTP/1.1" 200 0
+ERROR 2022-05-28 23:15:34,039 [Thread-1:30120] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107814
+INFO 2022-05-28 23:20:29,541 [MainThread:18476] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:20:30,485 [MainThread:30080] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:20:38,678 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:20:43,191 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:20:43,416 [Thread-2:12476] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_7vcWlyi.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:20:43,444 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:20:45,847 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+INFO 2022-05-28 23:20:45,869 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:20:45,894 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4778
+INFO 2022-05-28 23:20:46,015 [Thread-2:12476] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_7vcWlyi.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 62450
+INFO 2022-05-28 23:20:48,588 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:20:48,660 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 5347
+INFO 2022-05-28 23:20:52,510 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/rotate/ HTTP/1.1" 200 0
+INFO 2022-05-28 23:20:52,635 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/rotate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:20:52,724 [Thread-1:10752] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 5120
+ERROR 2022-05-28 23:20:58,333 [Thread-1:10752] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107455
+WARNING 2022-05-28 23:21:15,240 [Thread-2:12476] [django.server:187] [basehttp:log_message] [WARNING]- "GET /api/translate/ HTTP/1.1" 405 10536
+WARNING 2022-05-28 23:21:36,324 [Thread-2:12476] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2364
+WARNING 2022-05-28 23:25:10,800 [Thread-2:12476] [django.server:187] [basehttp:log_message] [WARNING]- "GET /api/translate/ HTTP/1.1" 405 10536
+INFO 2022-05-28 23:28:12,000 [MainThread:30080] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 23:28:12,891 [MainThread:25540] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:28:20,996 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:28:25,463 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:28:25,677 [Thread-2:19280] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_vrQ1vOn.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:28:25,704 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:28:28,925 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:28:28,946 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:28:29,070 [Thread-2:19280] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_vrQ1vOn.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 9055
+INFO 2022-05-28 23:28:32,392 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:28:32,422 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:28:37,462 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:28:37,482 [Thread-1:1964] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:28:43,065 [MainThread:25540] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-28 23:28:43,976 [MainThread:13100] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-28 23:29:14,132 [Thread-1:22804] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107891
+INFO 2022-05-28 23:29:44,742 [MainThread:13100] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:29:45,732 [MainThread:2344] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:29:48,728 [Thread-1:2676] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:29:52,512 [Thread-1:2676] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:29:52,734 [Thread-2:22460] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_3KUfzo1.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:29:52,762 [Thread-1:2676] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-28 23:29:55,411 [Thread-1:2676] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107878
+INFO 2022-05-28 23:30:02,530 [Thread-1:2676] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:30:36,253 [MainThread:2344] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:30:37,289 [MainThread:26460] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:30:39,373 [Thread-1:18348] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:30:39,607 [Thread-2:25832] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_maG5laQ.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:30:39,634 [Thread-1:18348] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:30:46,009 [Thread-1:18348] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:30:46,027 [Thread-1:18348] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4335
+INFO 2022-05-28 23:30:46,146 [Thread-2:25832] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_maG5laQ.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+INFO 2022-05-28 23:35:54,100 [MainThread:26460] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:35:55,027 [MainThread:4256] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-28 23:35:58,111 [Thread-1:25100] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107908
+INFO 2022-05-28 23:36:11,788 [Thread-1:25100] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:36:17,437 [Thread-1:25100] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:36:17,653 [Thread-2:2740] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_kWNsVim.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:36:17,680 [Thread-1:25100] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-28 23:36:21,113 [Thread-1:25100] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107904
+INFO 2022-05-28 23:36:29,627 [Thread-1:25100] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:36:40,806 [MainThread:4256] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:36:41,800 [MainThread:25576] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:36:43,971 [Thread-1:24624] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:36:44,202 [Thread-2:29344] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_CCAgWBM.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:36:44,237 [Thread-1:24624] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-28 23:36:49,064 [Thread-1:24624] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107923
+INFO 2022-05-28 23:36:53,802 [Thread-1:24624] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:36:56,823 [Thread-1:24624] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:36:56,975 [Thread-2:29344] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_V2rLpdZ.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:36:56,998 [Thread-1:24624] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:37:04,210 [MainThread:25576] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:37:05,139 [MainThread:14560] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:37:05,636 [Thread-1:18224] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:37:05,669 [Thread-1:18224] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4335
+INFO 2022-05-28 23:37:05,786 [Thread-2:26668] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_V2rLpdZ.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+INFO 2022-05-28 23:46:47,601 [MainThread:14560] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:46:48,559 [MainThread:23108] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:46:49,650 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:46:49,682 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:46:52,622 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:46:52,643 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4334
+INFO 2022-05-28 23:46:55,739 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:46:55,757 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:46:58,176 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:46:58,193 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:47:07,102 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:47:07,123 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4339
+INFO 2022-05-28 23:47:13,408 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:47:13,425 [Thread-1:4216] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4338
+INFO 2022-05-28 23:47:21,586 [MainThread:23108] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:47:22,556 [MainThread:21652] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:47:23,909 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:47:23,937 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4338
+ERROR 2022-05-28 23:47:29,122 [Thread-1:21980] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107908
+INFO 2022-05-28 23:47:51,846 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-28 23:47:55,524 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:47:55,684 [Thread-2:3676] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_OPNjVdO.jpg HTTP/1.1" 200 9055
+INFO 2022-05-28 23:47:55,701 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:47:58,415 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:47:58,437 [Thread-1:21980] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4335
+INFO 2022-05-28 23:47:58,557 [Thread-2:3676] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_OPNjVdO.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19397
+INFO 2022-05-28 23:48:10,609 [MainThread:21652] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:48:11,528 [MainThread:26908] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-28 23:48:49,672 [Thread-1:20328] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 104
+INFO 2022-05-28 23:48:49,705 [Thread-1:20328] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-28 23:50:39,188 [MainThread:26908] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-28 23:50:40,116 [MainThread:23324] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+ERROR 2022-05-28 23:51:07,300 [Thread-1:12520] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/translate/ HTTP/1.1" 500 107887
+INFO 2022-05-31 11:00:08,957 [MainThread:760] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:00:54,669 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:00:57,975 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:00:58,260 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_q5zzRdz.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:00:58,278 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-05-31 11:00:58,346 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:01:03,046 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/translate/ HTTP/1.1" 200 0
+INFO 2022-05-31 11:01:03,086 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:01:03,122 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4350
+INFO 2022-05-31 11:01:03,431 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_q5zzRdz.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 28544
+INFO 2022-05-31 11:01:07,637 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/translate/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:01:07,678 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4318
+INFO 2022-05-31 11:01:25,325 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/logChange/ HTTP/1.1" 200 0
+INFO 2022-05-31 11:01:25,362 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/logChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:01:25,394 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 3198
+INFO 2022-05-31 11:01:37,770 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:01:41,206 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:01:41,528 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_U86N442.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:01:41,576 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:01:52,135 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/reverseChange/ HTTP/1.1" 200 0
+INFO 2022-05-31 11:01:52,179 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/reverseChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:01:52,218 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4333
+INFO 2022-05-31 11:01:52,475 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_U86N442.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 19576
+INFO 2022-05-31 11:02:01,136 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:02:04,886 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:02:05,148 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_dRHC46n.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:02:05,190 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:02:08,673 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/histogramToOne/ HTTP/1.1" 200 0
+ERROR 2022-05-31 11:02:08,834 [Thread-1:12548] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/histogramToOne/ HTTP/1.1" 500 103668
+INFO 2022-05-31 11:02:14,019 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:02:17,676 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:02:17,912 [Thread-2:9172] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_vmrT6wI.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:02:17,950 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:02:19,609 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/histogramToBalance/ HTTP/1.1" 200 0
+ERROR 2022-05-31 11:02:19,724 [Thread-1:12548] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/histogramToBalance/ HTTP/1.1" 500 108828
+INFO 2022-05-31 11:02:24,197 [Thread-1:12548] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:04:55,866 [MainThread:760] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-31 11:04:57,487 [MainThread:22504] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:05:00,569 [Thread-1:25444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:05:00,934 [Thread-2:17280] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_gRZ0TMs.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:05:01,011 [Thread-1:25444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:05:03,214 [Thread-1:25444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/logChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:05:03,254 [Thread-1:25444] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 3819
+INFO 2022-05-31 11:05:03,511 [Thread-2:17280] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_gRZ0TMs.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 17158
+INFO 2022-05-31 11:08:28,399 [MainThread:22504] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-31 11:08:29,859 [MainThread:2024] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:08:40,747 [Thread-1:23472] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:08:44,426 [Thread-1:23472] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:08:44,797 [Thread-2:8456] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_HNZOItU.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:08:44,839 [Thread-1:23472] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:08:46,944 [Thread-1:23472] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/logChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:08:46,989 [Thread-1:23472] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 3179
+INFO 2022-05-31 11:08:47,240 [Thread-2:8456] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_HNZOItU.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 3776
+INFO 2022-05-31 11:11:46,252 [MainThread:2024] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-31 11:11:48,092 [MainThread:25076] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:11:55,450 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:11:59,532 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:11:59,988 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_3yInVFZ.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:12:00,051 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:12:01,945 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/logChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:12:01,982 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 3819
+INFO 2022-05-31 11:12:02,258 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_3yInVFZ.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 17158
+INFO 2022-05-31 11:12:09,539 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:12:13,253 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:12:13,467 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_Dyx6zUh.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:12:13,497 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:12:17,288 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/gammaChange/ HTTP/1.1" 200 0
+ERROR 2022-05-31 11:12:17,432 [Thread-1:21476] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/gammaChange/ HTTP/1.1" 500 108804
+INFO 2022-05-31 11:12:22,787 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:12:28,169 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:12:28,371 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_rhu4dky.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:12:28,399 [Thread-1:21476] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-31 11:12:52,843 [Thread-1:21476] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/gammaChange/ HTTP/1.1" 500 108804
+WARNING 2022-05-31 11:13:06,655 [Thread-2:11336] [django.server:187] [basehttp:log_message] [WARNING]- "GET /api/gammaChange/ HTTP/1.1" 405 10559
+INFO 2022-05-31 11:13:06,771 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,777 [Thread-3:3716] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,778 [Thread-4:23492] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,783 [Thread-5:19032] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,784 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,786 [Thread-6:11156] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,789 [Thread-3:3716] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,789 [Thread-7:23924] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,792 [Thread-4:23492] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:06,795 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-05-31 11:13:07,040 [Thread-2:11336] [django.server:187] [basehttp:log_message] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2022-05-31 11:13:23,314 [Thread-2:11336] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2364
+INFO 2022-05-31 11:17:33,276 [MainThread:25076] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-31 11:17:35,055 [MainThread:19724] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:19:11,182 [MainThread:19724] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:19:12,916 [MainThread:24516] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:19:14,618 [Thread-1:19928] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:19:23,164 [Thread-1:19928] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:19:23,630 [Thread-2:20672] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_QAOKu8Z.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:19:23,668 [Thread-1:19928] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:19:28,268 [Thread-1:19928] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/gammaChange/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:19:28,311 [Thread-1:19928] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4373
+INFO 2022-05-31 11:19:28,590 [Thread-2:20672] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_QAOKu8Z.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 23126
+INFO 2022-05-31 11:21:35,786 [MainThread:24516] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:21:37,375 [MainThread:20560] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:21:54,330 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/linearChange/ HTTP/1.1" 200 0
+ERROR 2022-05-31 11:21:54,461 [Thread-1:16704] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/linearChange/ HTTP/1.1" 500 98385
+INFO 2022-05-31 11:21:58,831 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:22:03,324 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:22:03,826 [Thread-2:11148] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_7ZaJ5xd.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:22:03,896 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-31 11:22:22,501 [Thread-1:16704] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/linearChange/ HTTP/1.1" 500 98385
+INFO 2022-05-31 11:23:34,807 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:24:01,864 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 103
+INFO 2022-05-31 11:24:02,264 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1453
+INFO 2022-05-31 11:24:02,359 [Thread-3:1140] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/cameraman.tif HTTP/1.1" 200 65240
+INFO 2022-05-31 11:24:02,369 [Thread-4:15708] [django.server:80] [basehttp:handle_error] [INFO]- - Broken pipe from ('127.0.0.1', 7829)
+
+INFO 2022-05-31 11:24:12,874 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 111
+INFO 2022-05-31 11:24:12,911 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1453
+INFO 2022-05-31 11:24:12,956 [Thread-7:12888] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/cameraman_qK9lB7s.tif HTTP/1.1" 200 65240
+INFO 2022-05-31 11:24:12,969 [Thread-8:20260] [django.server:80] [basehttp:handle_error] [INFO]- - Broken pipe from ('127.0.0.1', 7839)
+
+INFO 2022-05-31 11:24:19,324 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 111
+INFO 2022-05-31 11:24:19,346 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1453
+INFO 2022-05-31 11:24:19,376 [Thread-11:22424] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/cameraman_IJw8nV9.tif HTTP/1.1" 200 65240
+INFO 2022-05-31 11:24:19,385 [Thread-12:9460] [django.server:80] [basehttp:handle_error] [INFO]- - Broken pipe from ('127.0.0.1', 7846)
+
+INFO 2022-05-31 11:28:40,292 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 125
+INFO 2022-05-31 11:28:40,340 [Thread-14:532] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288.png HTTP/1.1" 200 37906
+INFO 2022-05-31 11:28:40,349 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+ERROR 2022-05-31 11:29:09,024 [Thread-1:16704] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/linearChange/ HTTP/1.1" 500 98425
+WARNING 2022-05-31 11:29:20,561 [Thread-14:532] [django.server:187] [basehttp:log_message] [WARNING]- "GET /api/linearChange/ HTTP/1.1" 405 10568
+INFO 2022-05-31 11:31:12,795 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:31:27,655 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:31:32,005 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:31:32,264 [Thread-14:532] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_TaGrmQg.png HTTP/1.1" 200 37906
+INFO 2022-05-31 11:31:32,282 [Thread-1:16704] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+ERROR 2022-05-31 11:31:49,724 [Thread-1:16704] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/linearChange/ HTTP/1.1" 500 98441
+INFO 2022-05-31 11:33:13,558 [MainThread:20560] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:33:14,741 [MainThread:20940] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:33:20,099 [Thread-1:2664] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:33:31,785 [Thread-1:2664] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:33:32,237 [Thread-2:14628] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_4QMyAmG.png HTTP/1.1" 200 37906
+INFO 2022-05-31 11:33:32,282 [Thread-1:2664] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+ERROR 2022-05-31 11:33:58,701 [Thread-1:2664] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/linearChange/ HTTP/1.1" 500 108477
+INFO 2022-05-31 11:35:17,951 [MainThread:20940] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:35:19,474 [MainThread:17228] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:35:25,932 [Thread-1:18780] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:35:29,142 [Thread-1:18780] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:35:29,444 [Thread-2:13084] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_xhypmq7.png HTTP/1.1" 200 37906
+INFO 2022-05-31 11:35:29,495 [Thread-1:18780] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+INFO 2022-05-31 11:35:40,476 [Thread-1:18780] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:35:40,511 [Thread-1:18780] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1272
+INFO 2022-05-31 11:35:40,661 [Thread-2:13084] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_xhypmq7.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 26932
+INFO 2022-05-31 11:37:39,223 [MainThread:17228] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:37:40,955 [MainThread:21548] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:37:50,352 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:50,421 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1141
+INFO 2022-05-31 11:37:51,241 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:51,297 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1101
+INFO 2022-05-31 11:37:51,769 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:51,812 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:52,676 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:52,728 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:54,094 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:54,132 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:54,721 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:54,759 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:55,286 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:55,334 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:55,953 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:56,018 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:56,518 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:56,596 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:57,047 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:57,095 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:57,958 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:58,021 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:37:59,626 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/linearChange/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:37:59,667 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:38:10,029 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/histogramToBalance/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:38:10,060 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1098
+INFO 2022-05-31 11:39:32,475 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/contrast/ HTTP/1.1" 200 0
+INFO 2022-05-31 11:39:32,501 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/contrast/ HTTP/1.1" 200 133
+INFO 2022-05-31 11:39:32,545 [Thread-1:22076] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1094
+INFO 2022-05-31 11:47:37,250 [MainThread:21548] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:47:39,157 [MainThread:18472] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:47:57,585 [MainThread:18472] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:47:59,014 [MainThread:11964] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:48:10,144 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:48:13,863 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:48:14,193 [Thread-2:15204] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_Hanpufn.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:48:14,239 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-05-31 11:48:24,295 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/addSaltPepper/ HTTP/1.1" 200 0
+ERROR 2022-05-31 11:48:24,396 [Thread-1:25264] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/addSaltPepper/ HTTP/1.1" 500 109520
+INFO 2022-05-31 11:49:01,212 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-05-31 11:49:04,546 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-05-31 11:49:04,825 [Thread-2:15204] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_IQqUUh1.jpg HTTP/1.1" 200 9055
+INFO 2022-05-31 11:49:04,859 [Thread-1:25264] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-05-31 11:49:09,005 [Thread-1:25264] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/addSaltPepper/ HTTP/1.1" 500 109516
+INFO 2022-05-31 11:49:42,234 [MainThread:11964] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-05-31 11:49:44,028 [MainThread:3480] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-05-31 11:50:04,145 [MainThread:3480] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-05-31 11:50:05,705 [MainThread:5044] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-01 15:42:14,603 [MainThread:3216] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-01 15:44:31,518 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-06-01 15:44:38,071 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:44:38,439 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_mXvAYgR.jpg HTTP/1.1" 200 9055
+INFO 2022-06-01 15:44:38,466 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-06-01 15:44:38,505 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-06-01 15:44:43,546 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/resize/ HTTP/1.1" 200 0
+INFO 2022-06-01 15:44:43,578 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/resize/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:44:43,610 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4703
+INFO 2022-06-01 15:44:43,804 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_mXvAYgR.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 52563
+INFO 2022-06-01 15:44:56,260 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/reversal/ HTTP/1.1" 200 0
+INFO 2022-06-01 15:44:56,293 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/reversal/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:44:56,323 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4701
+INFO 2022-06-01 15:44:58,901 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_mXvAYgR.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 52654
+WARNING 2022-06-01 15:44:59,429 [Thread-2:30212] [django.server:187] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2364
+INFO 2022-06-01 15:45:10,197 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/reversal/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:45:10,233 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4703
+INFO 2022-06-01 15:45:11,955 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_mXvAYgR.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 69915
+INFO 2022-06-01 15:45:19,771 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-06-01 15:45:24,692 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:45:25,035 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_ZOeIu5X.jpg HTTP/1.1" 200 9055
+INFO 2022-06-01 15:45:25,067 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-06-01 15:46:06,566 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:46:06,588 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_XLGivqN.png HTTP/1.1" 200 37906
+INFO 2022-06-01 15:46:06,592 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+INFO 2022-06-01 15:46:09,267 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/histogramToBalance/ HTTP/1.1" 200 0
+INFO 2022-06-01 15:46:09,285 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/histogramToBalance/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:46:09,308 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1318
+INFO 2022-06-01 15:46:09,439 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_XLGivqN.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 46300
+INFO 2022-06-01 15:47:57,333 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/addSaltPepper/ HTTP/1.1" 200 0
+INFO 2022-06-01 15:47:57,431 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:47:57,463 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1318
+INFO 2022-06-01 15:48:01,008 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:48:01,032 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1318
+INFO 2022-06-01 15:48:02,776 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_XLGivqN.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 46300
+INFO 2022-06-01 15:48:12,553 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:48:12,579 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1318
+INFO 2022-06-01 15:48:14,199 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_XLGivqN.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 46300
+INFO 2022-06-01 15:48:24,207 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-06-01 15:48:27,751 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:48:28,002 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_D8k78zJ.jpg HTTP/1.1" 200 9055
+INFO 2022-06-01 15:48:28,028 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+ERROR 2022-06-01 15:48:32,150 [Thread-1:32744] [django.server:187] [basehttp:log_message] [ERROR]- "POST /api/addSaltPepper/ HTTP/1.1" 500 109215
+INFO 2022-06-01 15:48:35,651 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-06-01 15:48:40,159 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:48:40,390 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_jDNeuIu.png HTTP/1.1" 200 37906
+INFO 2022-06-01 15:48:40,414 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+INFO 2022-06-01 15:48:45,322 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:48:45,348 [Thread-1:32744] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1441
+INFO 2022-06-01 15:48:45,474 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_jDNeuIu.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 38631
+INFO 2022-06-01 15:48:51,826 [Thread-2:30212] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_jDNeuIu.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 38631
+INFO 2022-06-01 15:54:50,308 [MainThread:3216] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-01 15:54:52,076 [MainThread:31112] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-01 15:54:53,852 [Thread-1:26208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 133
+INFO 2022-06-01 15:54:53,900 [Thread-1:26208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 1330
+INFO 2022-06-01 15:54:55,528 [Thread-2:31428] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/aefbc28f7d8be24a4f08c2da16e2288_jDNeuIu.png?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 43389
+INFO 2022-06-01 15:55:08,272 [Thread-1:26208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:55:08,303 [Thread-2:31428] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_o57gyBE.jpg HTTP/1.1" 200 9055
+INFO 2022-06-01 15:55:08,310 [Thread-1:26208] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-06-01 15:57:21,445 [MainThread:31112] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-01 15:57:22,969 [MainThread:21768] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-01 15:57:36,742 [Thread-1:6496] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 105
+INFO 2022-06-01 15:57:36,790 [Thread-1:6496] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4456
+INFO 2022-06-01 15:57:36,961 [Thread-2:30868] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_o57gyBE.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 187666
