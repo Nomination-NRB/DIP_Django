@@ -80,14 +80,6 @@ def get_hist_dict(filePath):
 # 图像反转
 def reverse(img):
     return 255 - img
-<<<<<<< HEAD
-
-
-
-# 伽马变换 幂次变换
-def gamma(img, gamma=2., eps=1e-6):
-=======
-
 
 # 对数变换
 def log(img, c=1.0):
@@ -104,13 +96,10 @@ def log(img, c=1.0):
 
 # 伽马变换 幂次变换
 def gamma(img, gamma=2., eps=0.):
->>>>>>> PapriKey/dmp_course-project/master
     return 255. * ((img + eps) / 255.) ** gamma
-
 
 def hist_equal(img):
     return cv2.equalizeHist(img)
-
 
 # 分段线性变换
 def gray_three_linear_trans(input, a, b, c=0, d=255):
@@ -136,16 +125,11 @@ def contrast_stretching(img, m=255., eps=0., E=2.):
 
 # 噪声
 # 椒盐噪声
-<<<<<<< HEAD
-def salt_pepper_noise(img, pa=0.1,pb=0.1):
-=======
 def salt_pepper_noise(img, prob=0.1):
->>>>>>> PapriKey/dmp_course-project/master
     '''
     pa:白色噪声比例
     pb:黑色噪声比例
     '''
-<<<<<<< HEAD
     out = img.copy()
     if img.ndim == 3:
         rows, cols, c = img.shape
@@ -158,21 +142,6 @@ def salt_pepper_noise(img, prob=0.1):
             elif np.random.random() < pb:
                 out[i, j] = 255
     return out
-
-=======
-    H, W = img.shape
-    out = img.copy()
-    # 椒盐噪声
-    for y in range(H):
-        for x in range(W):
-            rdn = np.random.randint(0, 100)
-            if rdn < prob:
-                out[y, x] = 0
-            elif rdn > 100 - prob:
-                out[y, x] = 255
-    return
->>>>>>> PapriKey/dmp_course-project/master
-
 
 # 高斯噪声
 def gaussian_noise(img, mean=0, var=4):
@@ -368,16 +337,6 @@ def rotate(img, angle, x_center=0.5, y_center=0.5, scale=1):
     return rotated
 
 
-# 基本灰度变换
-# 对数变换
-def log(img, c=1):
-<<<<<<< HEAD
-    out=c * np.log(1.0 + img)
-    out=np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
-    return out
-=======
-    return c * np.log(1.0 + img)
->>>>>>> PapriKey/dmp_course-project/master
 
 
 def flip(image, x_flip=False, y_flip=False):
