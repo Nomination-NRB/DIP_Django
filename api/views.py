@@ -530,7 +530,7 @@ class sharpen(APIView):  # 锐化滤波
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+        opera('sharpen', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

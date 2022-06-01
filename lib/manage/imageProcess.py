@@ -131,7 +131,7 @@ def contrast_stretching(img, m=255., eps=0., E=2.):
 
 # 噪声
 # 椒盐噪声
-def salt_pepper_noise(img, prob=0.1):
+def salt_pepper_noise(img, pa,pb):
     '''
     pa:白色噪声比例
     pb:黑色噪声比例
@@ -400,3 +400,6 @@ def wienerFilter(img, PSF=None, eps=0, K=0):
     imgWienerFilter = np.fft.ifft2(fftImg * fftWiener)
     imgWienerFilter = np.abs(np.fft.fftshift(imgWienerFilter))
     return imgWienerFilter
+
+def sharpen():
+    pass
