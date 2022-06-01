@@ -81,7 +81,6 @@ def get_hist_dict(filePath):
 def reverse(img):
     return 255 - img
 
-
 # 对数变换
 def log(img, c=1.0):
     '''
@@ -99,10 +98,14 @@ def log(img, c=1.0):
 def gamma(img, gamma=2., eps=0.):
     return 255. * ((img + eps) / 255.) ** gamma
 
-
 def hist_equal(img):
-    return cv2.equalizeHist(img)
-
+    if img.ndim==2:
+        return cv2.equalizeHist(img)
+    elif img.ndim==3:
+        b=cv2.equalizeHist(img[:,:,0])
+        g=cv2.equalizeHist(img[:,:,1])
+        r=cv2.equalizeHist(img[:,:,2])
+        return cv2.merge([b,g,r])
 
 # 分段线性变换
 def gray_three_linear_trans(input, a, b, c=0, d=255):
@@ -130,20 +133,21 @@ def contrast_stretching(img, m=255., eps=0., E=2.):
 # 椒盐噪声
 def salt_pepper_noise(img, prob=0.1):
     '''
-    prob:椒盐噪声比例
+    pa:白色噪声比例
+    pb:黑色噪声比例
     '''
-    H, W = img.shape
     out = img.copy()
-    # 椒盐噪声
-    for y in range(H):
-        for x in range(W):
-            rdn = np.random.randint(0, 100)
-            if rdn < prob:
-                out[y, x] = 0
-            elif rdn > 100 - prob:
-                out[y, x] = 255
-    return
-
+    if img.ndim == 3:
+        rows, cols, c = img.shape
+    else :
+        rows, cols, = img.shape
+    for i in range(rows):
+        for j in range(cols):
+            if np.random.random() < pa:
+                out[i, j] = 0
+            elif np.random.random() < pb:
+                out[i, j] = 255
+    return out
 
 # 高斯噪声
 def gaussian_noise(img, mean=0, var=4):
@@ -181,9 +185,16 @@ def mean_blur(img, ksize):
     '''
     return cv2.blur(img, (ksize, ksize))
 
-
 def median_blur(img, ksize):
     return cv2.medianBlur(img, ksize)
+
+def filter(img,op_name,ksize):
+    if op_name == 'mean':
+        return mean_blur(img,ksize)
+    elif op_name == 'median':
+        return median_blur(img,ksize)
+    else:
+        return img
 
 
 # 自适应局部降噪
@@ -339,10 +350,6 @@ def rotate(img, angle, x_center=0.5, y_center=0.5, scale=1):
     return rotated
 
 
-# 基本灰度变换
-# 对数变换
-def log(img, c=1):
-    return c * np.log(1.0 + img)
 
 
 def flip(image, x_flip=False, y_flip=False):
