@@ -113,17 +113,11 @@ class linearChange(APIView):  # 分段线性变化
         dict['filepath'] = path
         # inputA、inputB、inputC、inputD
         # a、b、c、d
-<<<<<<< HEAD
         dict['a'] = int(request.data.get('inputA'))
         dict['b'] = int(request.data.get('inputB'))
         dict['c'] = int(request.data.get('inputC'))
         dict['d'] = int(request.data.get('inputD'))
-=======
-        dict['a'] = request.data.get('inputA')
-        dict['b'] = request.data.get('inputB')
-        dict['c'] = request.data.get('inputC')
-        dict['d'] = request.data.get('inputD')
->>>>>>> PapriKey/dmp_course-project/master
+
 
         opera('gray_three_linear_trans', dict)
         # 以下也是复制粘贴
@@ -269,11 +263,7 @@ class gammaChange(APIView):  # 幂次变换
         # gamma
         dict = {}
         dict['filepath'] = path
-<<<<<<< HEAD
         dict['gamma'] = eval(request.data.get('inputGamma'))
-=======
-        dict['gamma'] = request.data.get('inputGamma')
->>>>>>> PapriKey/dmp_course-project/master
 
         opera('gamma', dict)
         # 以下也是复制粘贴
@@ -341,21 +331,11 @@ class addSaltPepper(APIView):  # 椒盐噪声
 
         # 调用处理函数
         # zoomPepperValue、zoomSaltValue
-<<<<<<< HEAD
         # pa、pb
         dict = {}
         dict['filepath'] = path
         dict['pa'] = request.data.get('zoomPepperValue')
         dict['pb'] = request.data.get('zoomSaltValue')
-=======
-        dict = {}
-        dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
->>>>>>> PapriKey/dmp_course-project/master
-
         opera('salt_pepper_noise', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
@@ -517,14 +497,17 @@ class filter(APIView):  # 平滑滤波（中值/均值）
         # 以上为复制粘贴操作
 
         # 调用处理函数
+        # ValueOfMeanOrMedian、inputMeanOrMedianSize
+        # op_name、ksize
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
+        dict['op_name'] = request.data.get('ValueOfMeanOrMedian')
+        temp= int(request.data.get('inputMeanOrMedianSize'))
+        if(temp%2==0):
+            temp+=1
+        dict['ksize'] = temp
 
-        opera('median_blur', dict)
+        opera('filter', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

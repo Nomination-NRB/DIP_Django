@@ -2302,3 +2302,89 @@ Traceback (most recent call last):
   File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 125, in salt_pepper_noise
     rows, cols, = img.shape
 ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-01 16:32:17,828 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2022-06-01 16:32:30,411 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2022-06-01 16:32:41,815 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+WARNING 2022-06-01 16:32:56,160 [Thread-2:2880] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/filter/
+ERROR 2022-06-01 16:33:27,881 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+WARNING 2022-06-01 16:33:30,399 [Thread-2:2880] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/filter/

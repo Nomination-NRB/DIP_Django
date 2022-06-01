@@ -99,7 +99,13 @@ def gamma(img, gamma=2., eps=0.):
     return 255. * ((img + eps) / 255.) ** gamma
 
 def hist_equal(img):
-    return cv2.equalizeHist(img)
+    if img.ndim==2:
+        return cv2.equalizeHist(img)
+    elif img.ndim==3:
+        b=cv2.equalizeHist(img[:,:,0])
+        g=cv2.equalizeHist(img[:,:,1])
+        r=cv2.equalizeHist(img[:,:,2])
+        return cv2.merge([b,g,r])
 
 # 分段线性变换
 def gray_three_linear_trans(input, a, b, c=0, d=255):
@@ -179,9 +185,16 @@ def mean_blur(img, ksize):
     '''
     return cv2.blur(img, (ksize, ksize))
 
-
 def median_blur(img, ksize):
     return cv2.medianBlur(img, ksize)
+
+def filter(img,op_name,ksize):
+    if op_name == 'mean':
+        return mean_blur(img,ksize)
+    elif op_name == 'median':
+        return median_blur(img,ksize)
+    else:
+        return img
 
 
 # 自适应局部降噪
