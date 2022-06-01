@@ -1623,3 +1623,5 @@ INFO 2022-06-01 15:57:22,969 [MainThread:21768] [django.utils.autoreload:677] [a
 INFO 2022-06-01 15:57:36,742 [Thread-1:6496] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/addSaltPepper/ HTTP/1.1" 200 105
 INFO 2022-06-01 15:57:36,790 [Thread-1:6496] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4456
 INFO 2022-06-01 15:57:36,961 [Thread-2:30868] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_o57gyBE.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 187666
+INFO 2022-06-01 15:59:11,928 [MainThread:21768] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-06-01 15:59:13,744 [MainThread:2720] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
