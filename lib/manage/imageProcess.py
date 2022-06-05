@@ -4,7 +4,14 @@ from urllib import parse
 
 import numpy as np
 
-
+def trans2jpg(filePath):
+    path=parse.unquote(filePath)
+    if(filePath.endswith('.jpg')):
+        return filePath
+    else:
+        img=cv2.imread(path)
+        cv2.imwrite(filePath[:-4]+'.jpg',img)
+        return filePath[:-4]+'.jpg'
 def judge_img_type(img):
     """
     判断图片类型
@@ -34,6 +41,9 @@ def opera(op, dict):
     dict['filepath'] = parse.unquote(dict['filepath'])
     paradict = dict.copy()
     del (paradict['filepath'])
+    print('op:',op)
+    for i in paradict:
+        print(i, paradict[i],type(paradict[i]))
     img = cv2.imread(dict['filepath'])
     imgType = judge_img_type(img)
     if imgType == 'gray':
@@ -126,7 +136,9 @@ def gray_three_linear_trans(input, a, b, c=0, d=255):
 
 
 def contrast_stretching(img, m=255., eps=0., E=2.):
-    return 1. / (1 + (m / (img + eps)) ** E)
+    out= 1. / (1 + (m / (img + eps)) ** E)
+    out=np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    return out
 
 
 # 噪声
@@ -137,10 +149,7 @@ def salt_pepper_noise(img, pa,pb):
     pb:黑色噪声比例
     '''
     out = img.copy()
-    if img.ndim == 3:
-        rows, cols, c = img.shape
-    else :
-        rows, cols, = img.shape
+    rows, cols, = img.shape[:2]
     for i in range(rows):
         for j in range(cols):
             if np.random.random() < pa:
@@ -155,7 +164,7 @@ def gaussian_noise(img, mean=0, var=4):
     mean:均值
     var:方差
     '''
-    H, W = img.shape
+    H, W = img.shape[:2]
     out = img.copy()
     # 高斯噪声
     for y in range(H):
@@ -198,27 +207,36 @@ def filter(img,op_name,ksize):
 
 
 # 自适应局部降噪
-def adaptive_mean(img, m=5, n=None):
+def adaptive_mean(image, m=5, n=None):
     '''
     m*n:均值降噪窗口大小
     '''
     eps = 1e-8
     if n == None:
         n = m
-    imgAda = np.zeros(img.shape)
+    imgAda = np.zeros(image.shape)
     hPad = int((m - 1) / 2)
     wPad = int((n - 1) / 2)
-    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
-    _, std = cv2.meanStdDev(img)
-    var = std ** 2
-    for i in range(img.shape[0]):
-        for j in range(img.shape[1]):
-            pad = imgPad[i:i + m, j:j + n]
-            gxy = img[i, j]
-            zSxy = np.mean(pad)
-            varSxy = np.var(pad)
-            rateVar = min(var / (varSxy + eps), 1.0)
-            imgAda[i, j] = gxy - rateVar * (gxy - zSxy)
+    q = img.ndim
+    e = 3
+    if q == 2:
+        img.reshape(img.shape[0], img.shape[1], 1)
+        e = 1
+    for k in range(e):
+        img=image[:,:,i]
+        imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+        _, std = cv2.meanStdDev(img)
+        var = std ** 2
+        for i in range(img.shape[0]):
+            for j in range(img.shape[1]):
+                pad = imgPad[i:i + m, j:j + n]
+                gxy = img[i, j]
+                zSxy = np.mean(pad)
+                varSxy = np.var(pad)
+                rateVar = min(var / (varSxy + eps), 1.0)
+                imgAda[i, j,k] = gxy - rateVar * (gxy - zSxy)
+    if q==2:
+        return imgAda[:,:,0]
     return imgAda
 
 
@@ -370,24 +388,79 @@ def flip(image, x_flip=False, y_flip=False):
     return image
 
 
+def motion_disk_Blur(img,angle,radius,dist):
+    '''
+    图像运动模糊
+
+    参数:
+        img:图像
+        angel:旋转角度
+        radius:半径
+        dist:距离
+    返回值:
+        运动模糊后的图像
+    '''
+    out=motionBlur(img,angle,dist)
+    out=disk(out,radius)
+    return out
+
+def disk(img,radius):
+    if radius==0:
+        return img;
+    k = 0;
+    r=radius
+    mask = np.zeros((int(2 * r) + 1, int(2 * r) + 1))
+    for i in range(int(2 * r + 1)):
+        for j in range(int(2 * r + 1)):
+            if (i - r) ** 2 + (j - r) ** 2 <= r ** 2:
+                mask[i, j] = 1
+                k += 1
+    kernel=mask / k
+    n=img.ndim
+    m=3
+    if n==2:
+        img.reshape(img.shape[0],img.shape[1],1)
+        m=1
+    for i in range(m):
+        blurred=img[:,:,i]
+        blurred = cv2.filter2D(blurred, -1, kernel)
+        blurredNorm = np.uint8(cv2.normalize(blurred, None, 0, 255, cv2.NORM_MINMAX))
+        img[:,:,i]=blurredNorm
+    if n==2:
+        img.reshape(img.shape[0],img.shape[1])
+    return img
+
 # 图像复原
 def motionBlur(image, angle, dist, eps=1e-6):
-    shape = image.shape
+    if angle == 0 and dist == 0:
+        return image
+    shape = image.shape[:2]
     xCenter = (shape[0] - 1) / 2
     yCenter = (shape[1] - 1) / 2
     sinVal = np.sin(angle * np.pi / 180)
     cosVal = np.cos(angle * np.pi / 180)
-    PSF = np.zeros(shape)
-    for i in range(dist):
+    PSF = np.zeros(shape[:2])
+    for i in range(int(dist)):
         xOffset = round(sinVal * i)
         yOffset = round(cosVal * i)
         PSF[int(xCenter - xOffset), int(yCenter + yOffset)] = 1
     PSF = PSF / PSF.sum()
-    fftImg = np.fft.fft2(image)  # 进行二维数组的傅里叶变换
-    fftPSF = np.fft.fft2(PSF) + eps
-    fftBlur = np.fft.ifft2(fftImg * fftPSF)
-    fftBlur = np.abs(np.fft.fftshift(fftBlur))
-    return fftBlur
+    out=image.copy()
+    n = image.ndim
+    m=3
+    if n == 2:
+        image.reshape(image.shape[0], image.shape[1], 1)
+        m=1
+    for i in range(m):
+        img=image[:,:,i]
+        fftImg = np.fft.fft2(img)  # 进行二维数组的傅里叶变换
+        fftPSF = np.fft.fft2(PSF) + eps
+        fftBlur = np.fft.ifft2(fftImg * fftPSF)
+        fftBlur = np.abs(np.fft.fftshift(fftBlur))
+        out[:, :, i] = fftBlur
+    if n == 2:
+        out.reshape(out.shape[0], out.shape[1])
+    return out
 
 
 def wienerFilter(img, PSF=None, eps=0, K=0):

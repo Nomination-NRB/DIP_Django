@@ -357,8 +357,8 @@ class addGaussian(APIView):  # 高斯噪声
         # mean、var
         dict = {}
         dict['filepath'] = path
-        dict['mean'] = request.data.get('inputMean')
-        dict['var'] = request.data.get('inputVariance')
+        dict['mean'] = float(request.data.get('inputMean'))
+        dict['var'] = float(request.data.get('inputVariance'))
 
         opera('gaussian_noise', dict)
         # 以下也是复制粘贴
@@ -377,14 +377,23 @@ class motion(APIView):  # Motion/Disk模糊操作
         # 以上为复制粘贴操作
 
         # 调用处理函数
-        # inputMotionDistance、inputMotionAngle
-        # dist、angle
+        # inputMotionDistance、inputMotionAngle、inputMotionRadius
+        # dist、angle、radius
         dict = {}
         dict['filepath'] = path
-        dict['dist'] = request.data.get('inputMotionDistance')
-        dict['angle'] = request.data.get('inputMotionAngle')
-
-        opera('motionBlur', dict)
+        if request.data.get('inputMotionDistance') == '':
+            dict['dist'] = 0
+        else:
+            dict['dist'] = float(request.data.get('inputMotionDistance'))
+        if request.data.get('inputMotionAngle') == '':
+            dict['angle'] = 0
+        else:
+            dict['angle'] = float(request.data.get('inputMotionAngle'))
+        if request.data.get('inputMotionRadius') == '':
+            dict['radius'] = 0
+        else:
+            dict['radius'] = float(request.data.get('inputMotionRadius'))
+        opera('motion_disk_Blur', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
