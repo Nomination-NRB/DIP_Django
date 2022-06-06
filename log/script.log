@@ -1760,3 +1760,1542 @@ UnboundLocalError: local variable 'x' referenced before assignment
 WARNING 2022-05-28 15:38:48,728 [Thread-12:3576] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/resize/
 WARNING 2022-05-28 15:38:49,612 [Thread-13:9928] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
 WARNING 2022-05-28 15:43:10,724 [Thread-1:21084] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-05-28 22:08:45,996 [Thread-2:10252] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-05-28 22:45:42,693 [Thread-1:25648] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/resize/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 65, in post
+    opera('imageResize',dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+TypeError: imageResize() got multiple values for argument 'Sx'
+ERROR 2022-05-28 23:15:34,036 [Thread-1:30120] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 293, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:20:58,330 [Thread-1:10752] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 291, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+WARNING 2022-05-28 23:21:15,240 [Thread-2:12476] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/translate/
+WARNING 2022-05-28 23:21:36,323 [Thread-2:12476] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+WARNING 2022-05-28 23:25:10,799 [Thread-2:12476] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/translate/
+ERROR 2022-05-28 23:29:14,128 [Thread-1:22804] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 291, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:29:55,408 [Thread-1:2676] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 293, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:35:58,108 [Thread-1:25100] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 292, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:36:21,111 [Thread-1:25100] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 292, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:36:49,062 [Thread-1:24624] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 292, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:47:29,120 [Thread-1:21980] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 294, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-28 23:51:07,298 [Thread-1:12520] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/translate/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 191, in post
+    opera('shift_img', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 37, in opera
+    out=eval(op)(img,**paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 291, in shift_img
+    M = np.float32([[1, 0, x], [0, 1, y]])
+NameError: name 'np' is not defined
+ERROR 2022-05-31 11:02:08,825 [Thread-1:12548] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/histogramToOne/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 315, in post
+    opera('#zeho', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "<string>", line 1
+    #zeho
+        ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2022-05-31 11:02:19,720 [Thread-1:12548] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/histogramToBalance/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 291, in post
+    opera('hist_equal', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 104, in hist_equal
+    return cv2.equalizeHist(img)
+cv2.error: OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\histogram.cpp:3439: error: (-215:Assertion failed) _src.type() == CV_8UC1 in function 'cv::equalizeHist'
+
+ERROR 2022-05-31 11:12:17,423 [Thread-1:21476] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/gammaChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 267, in post
+    opera('gamma', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 88, in gamma
+    return 255. * ((img + eps) / 255.) ** gamma
+TypeError: ufunc 'power' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+ERROR 2022-05-31 11:12:52,840 [Thread-1:21476] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/gammaChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 267, in post
+    opera('gamma', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 88, in gamma
+    return 255. * ((img + eps) / 255.) ** gamma
+TypeError: ufunc 'power' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+WARNING 2022-05-31 11:13:06,655 [Thread-2:11336] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/gammaChange/
+WARNING 2022-05-31 11:13:23,314 [Thread-2:11336] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-05-31 11:21:54,455 [Thread-1:16704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/linearChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 116, in post
+    dict['a'] = eval(request.data.get('inputA'))
+TypeError: eval() arg 1 must be a string, bytes or code object
+ERROR 2022-05-31 11:22:22,498 [Thread-1:16704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/linearChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 116, in post
+    dict['a'] = eval(request.data.get('inputA'))
+TypeError: eval() arg 1 must be a string, bytes or code object
+ERROR 2022-05-31 11:29:09,021 [Thread-1:16704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/linearChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 116, in post
+    dict['a'] = eval(request.data.get('inputA'))
+TypeError: eval() arg 1 must be a string, bytes or code object
+WARNING 2022-05-31 11:29:20,560 [Thread-14:532] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/linearChange/
+ERROR 2022-05-31 11:31:49,721 [Thread-1:16704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/linearChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 116, in post
+    dict['a'] = eval(request.data.get('inputA'))
+TypeError: eval() arg 1 must be a string, bytes or code object
+ERROR 2022-05-31 11:33:58,697 [Thread-1:2664] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/linearChange/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 125, in post
+    opera('gray_three_linear_trans', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 104, in gray_three_linear_trans
+    m2 = (a <= input) & (input <= b)
+TypeError: '<=' not supported between instances of 'numpy.ndarray' and 'str'
+ERROR 2022-05-31 11:48:24,390 [Thread-1:25264] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addSaltPepper/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 339, in post
+    opera('salt_pepper_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 125, in salt_pepper_noise
+    rows, cols, = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-05-31 11:49:09,001 [Thread-1:25264] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addSaltPepper/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 339, in post
+    opera('salt_pepper_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 125, in salt_pepper_noise
+    rows, cols, = img.shape
+ValueError: too many values to unpack (expected 2)
+WARNING 2022-06-01 15:44:59,428 [Thread-2:30212] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-06-01 15:48:32,146 [Thread-1:32744] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addSaltPepper/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 339, in post
+    opera('salt_pepper_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 41, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 125, in salt_pepper_noise
+    rows, cols, = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-01 16:32:17,828 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2022-06-01 16:32:30,411 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2022-06-01 16:32:41,815 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+WARNING 2022-06-01 16:32:56,160 [Thread-2:2880] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/filter/
+ERROR 2022-06-01 16:33:27,881 [Thread-1:28308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/filter/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 505, in post
+    temp= int(request.data.get('ksize'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+WARNING 2022-06-01 16:33:30,399 [Thread-2:2880] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/filter/
+WARNING 2022-06-05 22:52:30,700 [Thread-2:13160] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-06-05 22:54:50,763 [Thread-1:12876] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 360, in post
+    dict['mean'] = request.data.get('inputMean').float()
+AttributeError: 'str' object has no attribute 'float'
+ERROR 2022-06-05 22:55:08,308 [Thread-1:12876] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 360, in post
+    dict['mean'] = request.data.get('inputMean').float()
+AttributeError: 'str' object has no attribute 'float'
+WARNING 2022-06-05 22:55:23,466 [Thread-2:9076] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/addGaussian/
+ERROR 2022-06-05 22:56:00,819 [Thread-1:12876] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 360, in post
+    dict['mean'] = request.data.get('inputMean').float()
+AttributeError: 'str' object has no attribute 'float'
+ERROR 2022-06-05 22:56:52,784 [Thread-1:14052] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 360, in post
+    dict['mean'] = float.data.get('inputMean')
+AttributeError: type object 'float' has no attribute 'data'
+ERROR 2022-06-05 22:57:24,501 [Thread-1:10768] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 360, in post
+    dict['mean'] = float(data.get('inputMean'))
+NameError: name 'data' is not defined
+ERROR 2022-06-05 22:58:45,748 [Thread-1:12908] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 363, in post
+    opera('gaussian_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 48, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 167, in gaussian_noise
+    H, W = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-05 23:00:25,742 [Thread-1:12908] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 363, in post
+    opera('gaussian_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 48, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 167, in gaussian_noise
+    H, W = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-05 23:03:18,376 [Thread-1:14028] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 363, in post
+    opera('gaussian_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 48, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 167, in gaussian_noise
+    H, W = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-05 23:07:03,319 [Thread-1:8760] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 363, in post
+    opera('gaussian_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 50, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 169, in gaussian_noise
+    H, W = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-05 23:08:09,201 [Thread-1:2408] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/addGaussian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 363, in post
+    opera('gaussian_noise', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 170, in gaussian_noise
+    H, W = img.shape
+ValueError: too many values to unpack (expected 2)
+ERROR 2022-06-05 23:27:51,837 [Thread-1:15996] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 386, in post
+    dict['radius'] = float(request.data.get('inputMotionRadius'))
+ValueError: could not convert string to float: ''
+ERROR 2022-06-05 23:30:04,477 [Thread-1:14872] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 386, in post
+    dict['radius'] = float(request.data.get('inputMotionRadius'))
+ValueError: could not convert string to float: ''
+ERROR 2022-06-05 23:32:40,798 [Thread-1:2500] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 394, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 400, in motion_disk_Blur
+    out=motionBlur(img,angle,dist)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 429, in motionBlur
+    for i in range(dist):
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:35:16,048 [Thread-1:12704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 394, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+TypeError: motion_disk_Blur() missing 1 required positional argument: 'radius'
+WARNING 2022-06-05 23:35:18,389 [Thread-2:3584] [django.request:241] [log:log_response] [WARNING]- Method Not Allowed: /api/motion/
+ERROR 2022-06-05 23:36:56,923 [Thread-1:15820] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 400, in motion_disk_Blur
+    out=motionBlur(img,angle,dist)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 436, in motionBlur
+    fftBlur = np.fft.ifft2(fftImg * fftPSF)
+ValueError: operands could not be broadcast together with shapes (359,447,3) (359,447) 
+ERROR 2022-06-05 23:41:26,918 [Thread-1:15608] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 408, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+NameError: name 'r' is not defined
+ERROR 2022-06-05 23:42:44,694 [Thread-1:3308] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 409, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:43:36,654 [Thread-1:9960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 409, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:45:11,685 [Thread-1:9960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 409, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:47:02,213 [Thread-1:10012] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 409, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:48:30,490 [Thread-1:12704] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 417, in disk
+    blurred=image[:,:,i]
+NameError: name 'image' is not defined
+ERROR 2022-06-05 23:50:13,453 [Thread-1:4612] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 401, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 409, in disk
+    mask = np.zeros((2 * r + 1, 2 * r + 1))
+TypeError: 'float' object cannot be interpreted as an integer
+ERROR 2022-06-05 23:52:16,726 [Thread-1:15884] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/smooth/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 444, in post
+    opera('#zeho', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "<string>", line 1
+    #zeho
+        ^
+SyntaxError: unexpected EOF while parsing
+ERROR 2022-06-06 00:02:09,898 [Thread-1:14092] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 232, in adaptive_mean
+    img=image[:,:,i]
+UnboundLocalError: local variable 'i' referenced before assignment
+WARNING 2022-06-06 09:38:34,253 [Thread-1:7816] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-06-06 09:38:35,339 [Thread-1:7816] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-06-06 09:42:04,211 [Thread-4:3556] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 220, in adaptive_mean
+    q = img.ndim
+UnboundLocalError: local variable 'img' referenced before assignment
+ERROR 2022-06-06 09:42:38,314 [Thread-4:3556] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 220, in adaptive_mean
+    q = img.ndim
+UnboundLocalError: local variable 'img' referenced before assignment
+ERROR 2022-06-06 09:45:08,901 [Thread-1:10104] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,i]
+UnboundLocalError: local variable 'i' referenced before assignment
+ERROR 2022-06-06 09:46:39,729 [Thread-3:2648] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:48:57,779 [Thread-1:9176] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:49:46,858 [Thread-1:13896] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 227, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:50:15,305 [Thread-1:4960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 227, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:52:52,361 [Thread-1:10488] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 404, in motion_disk_Blur
+    out=motionBlur(img,angle,dist)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 461, in motionBlur
+    out[:, :, i] = fftBlur
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:54:27,063 [Thread-1:17548] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 405, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 426, in disk
+    blurred=img[:,:,i]
+IndexError: index 1 is out of bounds for axis 2 with size 1
+ERROR 2022-06-06 09:59:11,795 [Thread-1:15180] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 405, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 426, in disk
+    blurred=img[:,:,i]
+IndexError: index 1 is out of bounds for axis 2 with size 1
+ERROR 2022-06-06 10:02:35,495 [Thread-1:9644] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMedian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 468, in post
+    opera('adaptive_median', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 249, in adaptive_median
+    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+  File "<__array_function__ internals>", line 180, in pad
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\arraypad.py", line 743, in pad
+    pad_width = _as_pairs(pad_width, array.ndim, as_index=True)
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\arraypad.py", line 518, in _as_pairs
+    return np.broadcast_to(x, (ndim, 2)).tolist()
+  File "<__array_function__ internals>", line 180, in broadcast_to
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\stride_tricks.py", line 412, in broadcast_to
+    return _broadcast_to(array, shape, subok=subok, readonly=True)
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\stride_tricks.py", line 348, in _broadcast_to
+    it = np.nditer(
+ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (2,2)  and requested shape (3,2)
+ERROR 2022-06-06 10:52:33,985 [Thread-1:2200] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/fft/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 566, in post
+    opera('#zeho', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "<string>", line 1
+    #zeho
+        ^
+SyntaxError: unexpected EOF while parsing

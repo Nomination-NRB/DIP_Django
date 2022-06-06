@@ -32,6 +32,7 @@ urlpatterns = [
     path('fft/', views.fft.as_view(), name='fft'),
     path('lowFilter/', views.lowFilter.as_view(), name='lowFilter'),
     path('highFilter/', views.highFilter.as_view(), name='highFilter'),
+    path('partition/', views.partition.as_view(), name='partition'),
     path('', views.index.as_view(), name='index'),
 ]
 
