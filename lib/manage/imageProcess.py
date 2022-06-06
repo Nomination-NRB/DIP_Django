@@ -638,3 +638,45 @@ def highFilter(img,ValueOfFilter,inputThreshold,n=0):
         return toTrans(img,gaussian_high_pass,inputThreshold)
     else :
         return img
+
+def OTSU(img):
+    _,out=cv2.threshold(img,0,255,cv2.THRESH_OTSU)
+    return out
+def GLOBAL(image):
+    q=image.ndim
+    e=3
+    if q==2:
+        e=1
+        image=image.reshape(image.shape[0],image.shape[1],1)
+    for k in range(e):
+        img=image[:,:,k]
+        deltaT = 1
+        hist = cv2.calcHist([img], [0], None, [256], [0, 256]).ravel()
+        grayScale = range(256)
+        total_pixels = img.shape[0] * img.shape[1]
+        total_gray = hist @ grayScale
+        T = round(total_gray / total_pixels)
+
+        while True:
+            num1, sum1 = 0, 0
+            for i in range(T):
+                num1 += hist[i]
+                sum1 += i * hist[i]
+            num2, sum2 = (total_pixels - num1), (total_gray - sum1)
+            T1 = round(sum1 / num1)
+            T2 = round(sum2 / num2)
+            newT = round((T1 + T2) / 2)
+            if abs(newT - T) < deltaT:
+                break
+            T = newT
+        _, image[:,:,k] = cv2.threshold(img, T, 255, cv2.THRESH_BINARY)
+    if q==2:
+        image=image.reshape(img.shape[0] , img.shape[1])
+    return image
+def OtsuOfGlobal(img,ValueOfOtsuOrGlobal):
+    if ValueOfOtsuOrGlobal=='Otsu':
+        return OTSU(img)
+    elif ValueOfOtsuOrGlobal=='Global':
+        return GLOBAL(img)
+    else :
+        return img

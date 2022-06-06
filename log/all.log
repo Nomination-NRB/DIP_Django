@@ -2446,3 +2446,34 @@ INFO 2022-06-06 11:58:42,394 [MainThread:11400] [django.utils.autoreload:266] [a
 INFO 2022-06-06 11:58:43,297 [MainThread:488] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 INFO 2022-06-06 12:00:29,018 [MainThread:488] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
 INFO 2022-06-06 12:00:29,878 [MainThread:11704] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:03:51,346 [MainThread:11704] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:03:52,317 [MainThread:1764] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:04:18,823 [MainThread:1764] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:04:19,752 [MainThread:2104] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:04:51,685 [MainThread:2104] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:04:52,587 [MainThread:8064] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:05:01,282 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 83
+INFO 2022-06-06 12:05:05,438 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/ImageSet/ HTTP/1.1" 200 105
+INFO 2022-06-06 12:05:05,730 [Thread-2:16412] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_op7B28X.jpg HTTP/1.1" 200 9055
+INFO 2022-06-06 12:05:05,745 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/getHistArray/ HTTP/1.1" 200 0
+INFO 2022-06-06 12:05:05,767 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4336
+INFO 2022-06-06 12:05:10,312 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "OPTIONS /api/filter/ HTTP/1.1" 200 0
+INFO 2022-06-06 12:05:10,329 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/filter/ HTTP/1.1" 200 105
+INFO 2022-06-06 12:05:10,348 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 4325
+INFO 2022-06-06 12:05:10,463 [Thread-2:16412] [django.server:187] [basehttp:log_message] [INFO]- "GET /media/images/dog_op7B28X.jpg?date=function%20now()%20{%20[native%20code]%20} HTTP/1.1" 200 24948
+INFO 2022-06-06 12:05:12,901 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/sharpen/ HTTP/1.1" 200 105
+INFO 2022-06-06 12:05:12,922 [Thread-1:4452] [django.server:187] [basehttp:log_message] [INFO]- "POST /api/getHistArray/ HTTP/1.1" 200 3278
+INFO 2022-06-06 12:06:10,468 [MainThread:8064] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-06-06 12:06:11,341 [MainThread:15068] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:06:26,877 [MainThread:15068] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-06-06 12:06:27,824 [MainThread:13580] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:06:39,589 [MainThread:13580] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-06-06 12:06:40,543 [MainThread:6972] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:09:14,201 [MainThread:6972] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\api\views.py changed, reloading.
+INFO 2022-06-06 12:09:15,259 [MainThread:10336] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:12:36,267 [MainThread:10336] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:12:37,293 [MainThread:15064] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:15:44,041 [MainThread:15064] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:15:44,932 [MainThread:5272] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+INFO 2022-06-06 12:18:06,615 [MainThread:5272] [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO]- C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py changed, reloading.
+INFO 2022-06-06 12:18:07,585 [MainThread:14048] [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader

@@ -641,9 +641,9 @@ class partition(APIView):  # 高通滤波
         # dict['b']=request.data.get('b')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
-        dict['ValueOfOtsuOrGlobal'] = request.data.get('ValueOfOtsuOrGlobal')
+        dict['ValueOfOtsuOrGlobal']=request.data.get('ValueOfOtsuOrGlobal')
+        opera('OtsuOrGlobal', dict)
 
-        opera('#zeho', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
