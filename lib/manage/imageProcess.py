@@ -214,16 +214,17 @@ def adaptive_mean(image, m=5, n=None):
     eps = 1e-8
     if n == None:
         n = m
-    imgAda = np.zeros(image.shape)
     hPad = int((m - 1) / 2)
     wPad = int((n - 1) / 2)
-    q = img.ndim
+    q = image.ndim
     e = 3
     if q == 2:
-        img.reshape(img.shape[0], img.shape[1], 1)
+        image=image.reshape(image.shape[0], image.shape[1], 1)
         e = 1
+    print(q,e,image.shape)
+    imgAda = np.zeros(image.shape)
     for k in range(e):
-        img=image[:,:,i]
+        img=image[:,:,k]
         imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
         _, std = cv2.meanStdDev(img)
         var = std ** 2
@@ -241,42 +242,52 @@ def adaptive_mean(image, m=5, n=None):
 
 
 # 自适应中值
-def adaptive_median(img, smax=7):
+def adaptive_median(image, smax=7):
     m, n = smax, smax
     hPad = int((m - 1) / 2)
     wPad = int((n - 1) / 2)
-    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
-    imgAda = np.zeros(img.shape)
-    for i in range(hPad, img.shape[0] + hPad):
-        for j in range(wPad, img.shape[1] + wPad):
-            ksize = 3
-            k = int(ksize / 2)
-            pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
-            zxy = img[i - hPad, j - wPad]
-            zmin = np.min(pad)
-            zmax = np.max(pad)
-            zmed = np.median(pad)
+    q = image.ndim
+    e = 3
+    if q == 2:
+        image=image.reshape(image.shape[0], image.shape[1], 1)
+        e = 1
+    imgAda = np.zeros(image.shape)
+    for k in range(e):
+        img=image[:,:,k]
+        imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+        for i in range(hPad, img.shape[0] + hPad):
+            for j in range(wPad, img.shape[1] + wPad):
+                ksize = 3
+                k = int(ksize / 2)
+                pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
+                zxy = img[i - hPad, j - wPad]
+                zmin = np.min(pad)
+                zmax = np.max(pad)
+                zmed = np.median(pad)
 
-            if zmin < zmed < zmax:
-                if zmin < zxy < zmax:
-                    imgAda[i - hPad, j - wPad] = zxy
-                else:
-                    imgAda[i - hPad, j - wPad] = zmed
-            else:
-                while True:
-                    ksize += 2
-                    k = int(ksize / 2)
-                    if zmin < zmed < zmax or ksize > smax:
-                        break
-                    pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
-                    zmed = np.median(pad)
-                    zmin = np.min(pad)
-                    zmax = np.max(pad)
-                if zmin < zmed < zmax or ksize > smax:
+                if zmin < zmed < zmax:
                     if zmin < zxy < zmax:
                         imgAda[i - hPad, j - wPad] = zxy
                     else:
                         imgAda[i - hPad, j - wPad] = zmed
+                else:
+                    while True:
+                        ksize += 2
+                        k = int(ksize / 2)
+                        if zmin < zmed < zmax or ksize > smax:
+                            break
+                        pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
+                        zmed = np.median(pad)
+                        zmin = np.min(pad)
+                        zmax = np.max(pad)
+                    if zmin < zmed < zmax or ksize > smax:
+                        if zmin < zxy < zmax:
+                            imgAda[i - hPad, j - wPad] = zxy
+                        else:
+                            imgAda[i - hPad, j - wPad] = zmed
+
+    if q==2:
+        return imgAda[:,:,0]
     return imgAda
 
 
@@ -419,7 +430,7 @@ def disk(img,radius):
     n=img.ndim
     m=3
     if n==2:
-        img.reshape(img.shape[0],img.shape[1],1)
+        img=img.reshape(img.shape[0],img.shape[1],1)
         m=1
     for i in range(m):
         blurred=img[:,:,i]
@@ -427,7 +438,7 @@ def disk(img,radius):
         blurredNorm = np.uint8(cv2.normalize(blurred, None, 0, 255, cv2.NORM_MINMAX))
         img[:,:,i]=blurredNorm
     if n==2:
-        img.reshape(img.shape[0],img.shape[1])
+        img=img.reshape(img.shape[0],img.shape[1])
     return img
 
 # 图像复原
@@ -445,12 +456,12 @@ def motionBlur(image, angle, dist, eps=1e-6):
         yOffset = round(cosVal * i)
         PSF[int(xCenter - xOffset), int(yCenter + yOffset)] = 1
     PSF = PSF / PSF.sum()
-    out=image.copy()
     n = image.ndim
     m=3
     if n == 2:
-        image.reshape(image.shape[0], image.shape[1], 1)
+        image=image.reshape(image.shape[0], image.shape[1], 1)
         m=1
+    out=image.copy()
     for i in range(m):
         img=image[:,:,i]
         fftImg = np.fft.fft2(img)  # 进行二维数组的傅里叶变换
@@ -459,7 +470,7 @@ def motionBlur(image, angle, dist, eps=1e-6):
         fftBlur = np.abs(np.fft.fftshift(fftBlur))
         out[:, :, i] = fftBlur
     if n == 2:
-        out.reshape(out.shape[0], out.shape[1])
+        out=out.reshape(out.shape[0], out.shape[1])
     return out
 
 

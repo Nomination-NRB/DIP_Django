@@ -2980,3 +2980,296 @@ Traceback (most recent call last):
   File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 232, in adaptive_mean
     img=image[:,:,i]
 UnboundLocalError: local variable 'i' referenced before assignment
+WARNING 2022-06-06 09:38:34,253 [Thread-1:7816] [django.request:241] [log:log_response] [WARNING]- Not Found: /
+WARNING 2022-06-06 09:38:35,339 [Thread-1:7816] [django.request:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+ERROR 2022-06-06 09:42:04,211 [Thread-4:3556] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 220, in adaptive_mean
+    q = img.ndim
+UnboundLocalError: local variable 'img' referenced before assignment
+ERROR 2022-06-06 09:42:38,314 [Thread-4:3556] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 220, in adaptive_mean
+    q = img.ndim
+UnboundLocalError: local variable 'img' referenced before assignment
+ERROR 2022-06-06 09:45:08,901 [Thread-1:10104] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,i]
+UnboundLocalError: local variable 'i' referenced before assignment
+ERROR 2022-06-06 09:46:39,729 [Thread-3:2648] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:48:57,779 [Thread-1:9176] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 226, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:49:46,858 [Thread-1:13896] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 227, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:50:15,305 [Thread-1:4960] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMean/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 492, in post
+    opera('adaptive_mean', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 227, in adaptive_mean
+    img=image[:,:,k]
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:52:52,361 [Thread-1:10488] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 404, in motion_disk_Blur
+    out=motionBlur(img,angle,dist)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 461, in motionBlur
+    out[:, :, i] = fftBlur
+IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed
+ERROR 2022-06-06 09:54:27,063 [Thread-1:17548] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 405, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 426, in disk
+    blurred=img[:,:,i]
+IndexError: index 1 is out of bounds for axis 2 with size 1
+ERROR 2022-06-06 09:59:11,795 [Thread-1:15180] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/motion/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 396, in post
+    opera('motion_disk_Blur', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 405, in motion_disk_Blur
+    out=disk(out,radius)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 426, in disk
+    blurred=img[:,:,i]
+IndexError: index 1 is out of bounds for axis 2 with size 1
+ERROR 2022-06-06 10:02:35,495 [Thread-1:9644] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/selfMedian/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 468, in post
+    opera('adaptive_median', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 249, in adaptive_median
+    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+  File "<__array_function__ internals>", line 180, in pad
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\arraypad.py", line 743, in pad
+    pad_width = _as_pairs(pad_width, array.ndim, as_index=True)
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\arraypad.py", line 518, in _as_pairs
+    return np.broadcast_to(x, (ndim, 2)).tolist()
+  File "<__array_function__ internals>", line 180, in broadcast_to
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\stride_tricks.py", line 412, in broadcast_to
+    return _broadcast_to(array, shape, subok=subok, readonly=True)
+  File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\stride_tricks.py", line 348, in _broadcast_to
+    it = np.nditer(
+ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (2,2)  and requested shape (3,2)
