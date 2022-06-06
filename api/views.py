@@ -640,3 +640,26 @@ class partition(APIView):  # 高通滤波
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
+
+class partition(APIView):  # 高通滤波
+    def post(self, request):
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        # 以上为复制粘贴操作
+
+        # 调用处理函数
+        dict = {}
+        dict['filepath'] = path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+        dict['ValueOfOtsuOrGlobal'] = request.data.get('ValueOfOtsuOrGlobal')
+
+        opera('#zeho', dict)
+        # 以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
