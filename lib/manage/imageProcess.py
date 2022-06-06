@@ -493,3 +493,15 @@ def sharpen(img,ValueOfSharpen,inputSharpenSize):
         return laplacian(img,ksize)
     else :
         return image
+
+def fft2change(img,ValueOfmagnitudeOrphase):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    if ValueOfmagnitudeOrphase=='magnitude':
+        out=np.log(1+np.abs(out))
+        return np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    elif ValueOfmagnitudeOrphase=='phase':
+        out=np.angle(out)
+        return np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    else:
+        return img

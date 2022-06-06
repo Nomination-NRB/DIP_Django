@@ -557,12 +557,13 @@ class fft(APIView):  # 傅里叶变换
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
+        # ValueOfmagnitudeOrphase
+        dict['ValueOfmagnitudeOrphase']=request.data.get('ValueOfmagnitudeOrphase')
         # dict['b']=request.data.get('b')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+        opera('fft2change', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

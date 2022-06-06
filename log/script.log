@@ -3273,3 +3273,29 @@ Traceback (most recent call last):
   File "C:\Users\Zeho\AppData\Local\Programs\Python\Python38\lib\site-packages\numpy\lib\stride_tricks.py", line 348, in _broadcast_to
     it = np.nditer(
 ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (2,2)  and requested shape (3,2)
+ERROR 2022-06-06 10:52:33,985 [Thread-1:2200] [django.request:241] [log:log_response] [ERROR]- Internal Server Error: /api/fft/
+Traceback (most recent call last):
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Zeho\Desktop\Code\django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Zeho\Documents\dmp_course-project\api\views.py", line 566, in post
+    opera('#zeho', dict)
+  File "C:\Users\Zeho\Documents\dmp_course-project\lib\manage\imageProcess.py", line 51, in opera
+    out = eval(op)(img, **paradict)
+  File "<string>", line 1
+    #zeho
+        ^
+SyntaxError: unexpected EOF while parsing
