@@ -581,12 +581,15 @@ class lowFilter(APIView):  # 低通滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
+        #ValueOfLowFilter、inputLowThreshold、n
+        dict['ValueOfLowFilter']=request.data.get('ValueOfLowFilter')
+        dict['inputLowThreshold']=int(request.data.get('inputLowThreshold'))
+        if request.data.get('n')!='':
+            dict['n']=request.data.get('n')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+        opera('lowFilter', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

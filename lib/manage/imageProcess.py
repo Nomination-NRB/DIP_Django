@@ -505,3 +505,135 @@ def fft2change(img,ValueOfmagnitudeOrphase):
         return np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
     else:
         return img
+
+
+# 理想低通器
+def ideal_low_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            if np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) > d0:
+                mask[i, j] = 0
+    return mask
+
+
+# 理想高通器
+def ideal_high_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.zeros(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            if np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) > d0:
+                mask[i, j] = 1
+    return mask
+
+
+# 巴特沃斯低通器
+def butterworth_low_pass(img, d0, n):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+        n: 次数
+    返回:
+        mask: 巴特沃斯低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            mask[i, j] = 1 / (1 + (np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) / d0) ** (2 * n))
+    return mask
+
+
+# 巴特沃斯高通器
+def butterworth_high_pass(img, d0, n):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+        n: 次数
+    返回:
+        mask: 巴特沃斯高通滤波器
+    '''
+    return 1 - butterworth_low_pass(img, d0, n)
+
+
+# 高斯低通器
+def gaussian_low_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高斯低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            mask[i, j] = np.exp(-((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) / (2 * d0 ** 2))
+    return mask
+
+
+# 高斯高通器
+def gaussian_high_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高斯高通滤波器
+    '''
+    return 1 - gaussian_low_pass(img, d0)
+
+
+def toTrans(img, operater, d0):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    out = out * operater(out, d0)
+    out = np.fft.ifftshift(out)
+    out = np.fft.ifft2(out)
+    return np.abs(out)
+
+
+def toTransBtws(img, operater, d0, n):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    out = out * operater(out, d0, n)
+    out = np.fft.ifftshift(out)
+    out = np.fft.ifft2(out)
+    return np.abs(out)
+def lowFilter(img,ValueOfLowFilter,inputLowThreshold,n=0):
+    if ValueOfLowFilter=='ideal':
+        return toTrans(img,ideal_low_pass,inputLowThreshold)
+    elif ValueOfLowFilter=='butterworth':
+        return toTransBtws(img,butterworth_low_pass,inputLowThreshold,n)
+    elif ValueOfLowFilter=='gaussian':
+        return toTrans(img,gaussian_low_pass,inputLowThreshold)
+    else :
+        return img
+def highFilter(img,ValueOfLowFilter,inputLowThreshold,n=0):
+    if ValueOfLowFilter=='ideal':
+        return toTrans(img,ideal_high_pass,inputLowThreshold)
+    elif ValueOfLowFilter=='butterworth':
+        return toTransBtws(img,butterworth_high_pass,inputLowThreshold,n)
+    elif ValueOfLowFilter=='gaussian':
+        return toTrans(img,gaussian_high_pass,inputLowThreshold)
+    else :
+        return img
