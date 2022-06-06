@@ -4,7 +4,14 @@ from urllib import parse
 
 import numpy as np
 
-
+def trans2jpg(filePath):
+    path=parse.unquote(filePath)
+    if(filePath.endswith('.jpg')):
+        return filePath
+    else:
+        img=cv2.imread(path)
+        cv2.imwrite(filePath[:-4]+'.jpg',img)
+        return filePath[:-4]+'.jpg'
 def judge_img_type(img):
     """
     判断图片类型
@@ -34,6 +41,9 @@ def opera(op, dict):
     dict['filepath'] = parse.unquote(dict['filepath'])
     paradict = dict.copy()
     del (paradict['filepath'])
+    print('op:',op)
+    for i in paradict:
+        print(i, paradict[i],type(paradict[i]))
     img = cv2.imread(dict['filepath'])
     imgType = judge_img_type(img)
     if imgType == 'gray':
@@ -126,21 +136,20 @@ def gray_three_linear_trans(input, a, b, c=0, d=255):
 
 
 def contrast_stretching(img, m=255., eps=0., E=2.):
-    return 1. / (1 + (m / (img + eps)) ** E)
+    out= 1. / (1 + (m / (img + eps)) ** E)
+    out=np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    return out
 
 
 # 噪声
 # 椒盐噪声
-def salt_pepper_noise(img, prob=0.1):
+def salt_pepper_noise(img, pa,pb):
     '''
     pa:白色噪声比例
     pb:黑色噪声比例
     '''
     out = img.copy()
-    if img.ndim == 3:
-        rows, cols, c = img.shape
-    else :
-        rows, cols, = img.shape
+    rows, cols, = img.shape[:2]
     for i in range(rows):
         for j in range(cols):
             if np.random.random() < pa:
@@ -155,7 +164,7 @@ def gaussian_noise(img, mean=0, var=4):
     mean:均值
     var:方差
     '''
-    H, W = img.shape
+    H, W = img.shape[:2]
     out = img.copy()
     # 高斯噪声
     for y in range(H):
@@ -198,67 +207,87 @@ def filter(img,op_name,ksize):
 
 
 # 自适应局部降噪
-def adaptive_mean(img, m=5, n=None):
+def adaptive_mean(image, m=5, n=None):
     '''
     m*n:均值降噪窗口大小
     '''
     eps = 1e-8
     if n == None:
         n = m
-    imgAda = np.zeros(img.shape)
     hPad = int((m - 1) / 2)
     wPad = int((n - 1) / 2)
-    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
-    _, std = cv2.meanStdDev(img)
-    var = std ** 2
-    for i in range(img.shape[0]):
-        for j in range(img.shape[1]):
-            pad = imgPad[i:i + m, j:j + n]
-            gxy = img[i, j]
-            zSxy = np.mean(pad)
-            varSxy = np.var(pad)
-            rateVar = min(var / (varSxy + eps), 1.0)
-            imgAda[i, j] = gxy - rateVar * (gxy - zSxy)
+    q = image.ndim
+    e = 3
+    if q == 2:
+        image=image.reshape(image.shape[0], image.shape[1], 1)
+        e = 1
+    print(q,e,image.shape)
+    imgAda = np.zeros(image.shape)
+    for k in range(e):
+        img=image[:,:,k]
+        imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+        _, std = cv2.meanStdDev(img)
+        var = std ** 2
+        for i in range(img.shape[0]):
+            for j in range(img.shape[1]):
+                pad = imgPad[i:i + m, j:j + n]
+                gxy = img[i, j]
+                zSxy = np.mean(pad)
+                varSxy = np.var(pad)
+                rateVar = min(var / (varSxy + eps), 1.0)
+                imgAda[i, j,k] = gxy - rateVar * (gxy - zSxy)
+    if q==2:
+        return imgAda[:,:,0]
     return imgAda
 
 
 # 自适应中值
-def adaptive_median(img, smax=7):
+def adaptive_median(image, smax=7):
     m, n = smax, smax
     hPad = int((m - 1) / 2)
     wPad = int((n - 1) / 2)
-    imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
-    imgAda = np.zeros(img.shape)
-    for i in range(hPad, img.shape[0] + hPad):
-        for j in range(wPad, img.shape[1] + wPad):
-            ksize = 3
-            k = int(ksize / 2)
-            pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
-            zxy = img[i - hPad, j - wPad]
-            zmin = np.min(pad)
-            zmax = np.max(pad)
-            zmed = np.median(pad)
+    q = image.ndim
+    e = 3
+    if q == 2:
+        image=image.reshape(image.shape[0], image.shape[1], 1)
+        e = 1
+    imgAda = np.zeros(image.shape)
+    for k in range(e):
+        img=image[:,:,k]
+        imgPad = np.pad(img.copy(), ((hPad, m - hPad - 1), (wPad, n - wPad - 1)), 'edge')
+        for i in range(hPad, img.shape[0] + hPad):
+            for j in range(wPad, img.shape[1] + wPad):
+                ksize = 3
+                k = int(ksize / 2)
+                pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
+                zxy = img[i - hPad, j - wPad]
+                zmin = np.min(pad)
+                zmax = np.max(pad)
+                zmed = np.median(pad)
 
-            if zmin < zmed < zmax:
-                if zmin < zxy < zmax:
-                    imgAda[i - hPad, j - wPad] = zxy
-                else:
-                    imgAda[i - hPad, j - wPad] = zmed
-            else:
-                while True:
-                    ksize += 2
-                    k = int(ksize / 2)
-                    if zmin < zmed < zmax or ksize > smax:
-                        break
-                    pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
-                    zmed = np.median(pad)
-                    zmin = np.min(pad)
-                    zmax = np.max(pad)
-                if zmin < zmed < zmax or ksize > smax:
+                if zmin < zmed < zmax:
                     if zmin < zxy < zmax:
                         imgAda[i - hPad, j - wPad] = zxy
                     else:
                         imgAda[i - hPad, j - wPad] = zmed
+                else:
+                    while True:
+                        ksize += 2
+                        k = int(ksize / 2)
+                        if zmin < zmed < zmax or ksize > smax:
+                            break
+                        pad = imgPad[i - k:i + k + 1, j - k:j + k + 1]
+                        zmed = np.median(pad)
+                        zmin = np.min(pad)
+                        zmax = np.max(pad)
+                    if zmin < zmed < zmax or ksize > smax:
+                        if zmin < zxy < zmax:
+                            imgAda[i - hPad, j - wPad] = zxy
+                        else:
+                            imgAda[i - hPad, j - wPad] = zmed
+
+    if q==2:
+        return imgAda[:,:,0]
     return imgAda
 
 
@@ -267,8 +296,6 @@ def adaptive_median(img, smax=7):
 def sobel(img, ksize=3):
     sobelx = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=ksize)
     sobely = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=ksize)
-    abs_sobelx = cv2.convertScaleAbs(sobelx)
-    abs_sobely = cv2.convertScaleAbs(sobely)
     sobel = np.uint8(cv2.normalize(abs(sobelx) + abs(sobely), None, 0, 255, cv2.NORM_MINMAX))
     # return abs_sobelx,abs_sobely,sobel
     return sobel
@@ -370,24 +397,79 @@ def flip(image, x_flip=False, y_flip=False):
     return image
 
 
+def motion_disk_Blur(img,angle,radius,dist):
+    '''
+    图像运动模糊
+
+    参数:
+        img:图像
+        angel:旋转角度
+        radius:半径
+        dist:距离
+    返回值:
+        运动模糊后的图像
+    '''
+    out=motionBlur(img,angle,dist)
+    out=disk(out,radius)
+    return out
+
+def disk(img,radius):
+    if radius==0:
+        return img;
+    k = 0;
+    r=radius
+    mask = np.zeros((int(2 * r) + 1, int(2 * r) + 1))
+    for i in range(int(2 * r + 1)):
+        for j in range(int(2 * r + 1)):
+            if (i - r) ** 2 + (j - r) ** 2 <= r ** 2:
+                mask[i, j] = 1
+                k += 1
+    kernel=mask / k
+    n=img.ndim
+    m=3
+    if n==2:
+        img=img.reshape(img.shape[0],img.shape[1],1)
+        m=1
+    for i in range(m):
+        blurred=img[:,:,i]
+        blurred = cv2.filter2D(blurred, -1, kernel)
+        blurredNorm = np.uint8(cv2.normalize(blurred, None, 0, 255, cv2.NORM_MINMAX))
+        img[:,:,i]=blurredNorm
+    if n==2:
+        img=img.reshape(img.shape[0],img.shape[1])
+    return img
+
 # 图像复原
 def motionBlur(image, angle, dist, eps=1e-6):
-    shape = image.shape
+    if angle == 0 and dist == 0:
+        return image
+    shape = image.shape[:2]
     xCenter = (shape[0] - 1) / 2
     yCenter = (shape[1] - 1) / 2
     sinVal = np.sin(angle * np.pi / 180)
     cosVal = np.cos(angle * np.pi / 180)
-    PSF = np.zeros(shape)
-    for i in range(dist):
+    PSF = np.zeros(shape[:2])
+    for i in range(int(dist)):
         xOffset = round(sinVal * i)
         yOffset = round(cosVal * i)
         PSF[int(xCenter - xOffset), int(yCenter + yOffset)] = 1
     PSF = PSF / PSF.sum()
-    fftImg = np.fft.fft2(image)  # 进行二维数组的傅里叶变换
-    fftPSF = np.fft.fft2(PSF) + eps
-    fftBlur = np.fft.ifft2(fftImg * fftPSF)
-    fftBlur = np.abs(np.fft.fftshift(fftBlur))
-    return fftBlur
+    n = image.ndim
+    m=3
+    if n == 2:
+        image=image.reshape(image.shape[0], image.shape[1], 1)
+        m=1
+    out=image.copy()
+    for i in range(m):
+        img=image[:,:,i]
+        fftImg = np.fft.fft2(img)  # 进行二维数组的傅里叶变换
+        fftPSF = np.fft.fft2(PSF) + eps
+        fftBlur = np.fft.ifft2(fftImg * fftPSF)
+        fftBlur = np.abs(np.fft.fftshift(fftBlur))
+        out[:, :, i] = fftBlur
+    if n == 2:
+        out=out.reshape(out.shape[0], out.shape[1])
+    return out
 
 
 def wienerFilter(img, PSF=None, eps=0, K=0):
@@ -400,3 +482,201 @@ def wienerFilter(img, PSF=None, eps=0, K=0):
     imgWienerFilter = np.fft.ifft2(fftImg * fftWiener)
     imgWienerFilter = np.abs(np.fft.fftshift(imgWienerFilter))
     return imgWienerFilter
+
+def sharpen(img,ValueOfSharpen,inputSharpenSize):
+    ksize=inputSharpenSize
+    if ValueOfSharpen=='Sobel':
+        return sobel(img,ksize)
+    elif ValueOfSharpen=='LoG':
+        return LoG(img,ksize)
+    elif ValueOfSharpen=='Laplace':
+        return laplacian(img,ksize)
+    else :
+        return image
+
+def fft2change(img,ValueOfmagnitudeOrphase):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    if ValueOfmagnitudeOrphase=='magnitude':
+        out=np.log(1+np.abs(out))
+        return np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    elif ValueOfmagnitudeOrphase=='phase':
+        out=np.angle(out)
+        return np.uint8(cv2.normalize(out, None, 0, 255, cv2.NORM_MINMAX))
+    else:
+        return img
+
+
+# 理想低通器
+def ideal_low_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            if np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) > d0:
+                mask[i, j] = 0
+    return mask
+
+
+# 理想高通器
+def ideal_high_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.zeros(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            if np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) > d0:
+                mask[i, j] = 1
+    return mask
+
+
+# 巴特沃斯低通器
+def butterworth_low_pass(img, d0, n):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+        n: 次数
+    返回:
+        mask: 巴特沃斯低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            mask[i, j] = 1 / (1 + (np.sqrt((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) / d0) ** (2 * n))
+    return mask
+
+
+# 巴特沃斯高通器
+def butterworth_high_pass(img, d0, n):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+        n: 次数
+    返回:
+        mask: 巴特沃斯高通滤波器
+    '''
+    return 1 - butterworth_low_pass(img, d0, n)
+
+
+# 高斯低通器
+def gaussian_low_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高斯低通滤波器
+    '''
+    img_shape = img.shape
+    mask = np.ones(img_shape, dtype=np.float64)
+    for i in range(img_shape[0]):
+        for j in range(img_shape[1]):
+            mask[i, j] = np.exp(-((i - img_shape[0] / 2) ** 2 + (j - img_shape[1] / 2) ** 2) / (2 * d0 ** 2))
+    return mask
+
+
+# 高斯高通器
+def gaussian_high_pass(img, d0):
+    '''
+    参数
+        img: 原图像的频域图像
+        d0: 阈值
+    返回:
+        mask: 高斯高通滤波器
+    '''
+    return 1 - gaussian_low_pass(img, d0)
+
+
+def toTrans(img, operater, d0):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    out = out * operater(out, d0)
+    out = np.fft.ifftshift(out)
+    out = np.fft.ifft2(out)
+    return np.abs(out)
+
+
+def toTransBtws(img, operater, d0, n):
+    out = np.fft.fft2(img)
+    out = np.fft.fftshift(out)
+    out = out * operater(out, d0, n)
+    out = np.fft.ifftshift(out)
+    out = np.fft.ifft2(out)
+    return np.abs(out)
+
+def lowFilter(img,ValueOfFilter,inputThreshold,n=0):
+    if ValueOfFilter=='ideal':
+        return toTrans(img,ideal_low_pass,inputThreshold)
+    elif ValueOfFilter=='butterworth':
+        return toTransBtws(img,butterworth_low_pass,inputThreshold,n)
+    elif ValueOfFilter=='gaussian':
+        return toTrans(img,gaussian_low_pass,inputThreshold)
+    else :
+        return img
+def highFilter(img,ValueOfFilter,inputThreshold,n=0):
+    if ValueOfFilter=='idealHigh':
+        return toTrans(img,ideal_high_pass,inputThreshold)
+    elif ValueOfFilter=='butterworthHigh':
+        return toTransBtws(img,butterworth_high_pass,inputThreshold,n)
+    elif ValueOfFilter=='gaussianHigh':
+        return toTrans(img,gaussian_high_pass,inputThreshold)
+    else :
+        return img
+
+def OTSU(img):
+    _,out=cv2.threshold(img,0,255,cv2.THRESH_OTSU)
+    return out
+def GLOBAL(image):
+    q=image.ndim
+    e=3
+    if q==2:
+        e=1
+        image=image.reshape(image.shape[0],image.shape[1],1)
+    for k in range(e):
+        img=image[:,:,k]
+        deltaT = 1
+        hist = cv2.calcHist([img], [0], None, [256], [0, 256]).ravel()
+        grayScale = range(256)
+        total_pixels = img.shape[0] * img.shape[1]
+        total_gray = hist @ grayScale
+        T = round(total_gray / total_pixels)
+
+        while True:
+            num1, sum1 = 0, 0
+            for i in range(T):
+                num1 += hist[i]
+                sum1 += i * hist[i]
+            num2, sum2 = (total_pixels - num1), (total_gray - sum1)
+            T1 = round(sum1 / num1)
+            T2 = round(sum2 / num2)
+            newT = round((T1 + T2) / 2)
+            if abs(newT - T) < deltaT:
+                break
+            T = newT
+        _, image[:,:,k] = cv2.threshold(img, T, 255, cv2.THRESH_BINARY)
+    if q==2:
+        image=image.reshape(img.shape[0] , img.shape[1])
+    return image
+def OtsuOfGlobal(img,ValueOfOtsuOrGlobal):
+    if ValueOfOtsuOrGlobal=='Otsu':
+        return OTSU(img)
+    elif ValueOfOtsuOrGlobal=='Global':
+        return GLOBAL(img)
+    else :
+        return img

@@ -357,8 +357,8 @@ class addGaussian(APIView):  # 高斯噪声
         # mean、var
         dict = {}
         dict['filepath'] = path
-        dict['mean'] = request.data.get('inputMean')
-        dict['var'] = request.data.get('inputVariance')
+        dict['mean'] = float(request.data.get('inputMean'))
+        dict['var'] = float(request.data.get('inputVariance'))
 
         opera('gaussian_noise', dict)
         # 以下也是复制粘贴
@@ -377,14 +377,23 @@ class motion(APIView):  # Motion/Disk模糊操作
         # 以上为复制粘贴操作
 
         # 调用处理函数
-        # inputMotionDistance、inputMotionAngle
-        # dist、angle
+        # inputMotionDistance、inputMotionAngle、inputMotionRadius
+        # dist、angle、radius
         dict = {}
         dict['filepath'] = path
-        dict['dist'] = request.data.get('inputMotionDistance')
-        dict['angle'] = request.data.get('inputMotionAngle')
-
-        opera('motionBlur', dict)
+        if request.data.get('inputMotionDistance') == '':
+            dict['dist'] = 0
+        else:
+            dict['dist'] = float(request.data.get('inputMotionDistance'))
+        if request.data.get('inputMotionAngle') == '':
+            dict['angle'] = 0
+        else:
+            dict['angle'] = float(request.data.get('inputMotionAngle'))
+        if request.data.get('inputMotionRadius') == '':
+            dict['radius'] = 0
+        else:
+            dict['radius'] = float(request.data.get('inputMotionRadius'))
+        opera('motion_disk_Blur', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
@@ -525,12 +534,12 @@ class sharpen(APIView):  # 锐化滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
+        # ValueOfSharpen、inputSharpenSize
+        # ValueOfSharpen、inputSharpenSize
+        dict['ValueOfSharpen']=request.data.get('ValueOfSharpen')
+        dict['inputSharpenSize']=int(request.data.get('inputSharpenSize'))
 
-        opera('#zeho', dict)
+        opera('sharpen', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
@@ -548,12 +557,13 @@ class fft(APIView):  # 傅里叶变换
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
+        # ValueOfmagnitudeOrphase
+        dict['ValueOfmagnitudeOrphase']=request.data.get('ValueOfmagnitudeOrphase')
         # dict['b']=request.data.get('b')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+        opera('fft2change', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
@@ -571,12 +581,16 @@ class lowFilter(APIView):  # 低通滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
+        #ValueOfLowFilter、inputLowThreshold、n
+        #ValueOfFilter、inputThreshold、n
+        dict['ValueOfFilter']=request.data.get('ValueOfLowFilter')
+        dict['inputThreshold']=int(request.data.get('inputLowThreshold'))
+        if request.data.get('n')!='' :
+            dict['n']=request.data.get('n')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+        opera('lowFilter', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
@@ -594,12 +608,42 @@ class highFilter(APIView):  # 高通滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
+        # ValueOfHighFilter、inputHighThreshold、n
+        #ValueOfFilter、inputThreshold、n
+        dict['ValueOfFilter'] = request.data.get('ValueOfHighFilter')
+        dict['inputThreshold'] = int(request.data.get('inputHighThreshold'))
+        if request.data.get('n') != '':
+            dict['n'] = request.data.get('n')
         # dict['a']=request.data.get('a')
         # dict['b']=request.data.get('b')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
-        opera('#zeho', dict)
+
+        opera('highFilter', dict)
+        # 以下也是复制粘贴
+        # 返回定制格式的JSON
+        return success(serializer.data)
+
+class partition(APIView):  # 高通滤波
+    def post(self, request):
+        # 获取图片
+        images = Image.objects.get(id=request.data.get('id'))
+        serializer = ImageSerializer(images, context={'request': request})
+
+        path = re.search(r'media/(.*)', serializer.data['file']).group()
+        # 以上为复制粘贴操作
+
+        # 调用处理函数
+        dict = {}
+        dict['filepath'] = path
+        # dict['a']=request.data.get('a')
+        # dict['b']=request.data.get('b')
+        # dict['c']=request.data.get('c')
+        # dict['d']=request.data.get('d')
+        dict['ValueOfOtsuOrGlobal']=request.data.get('ValueOfOtsuOrGlobal')
+        opera('OtsuOrGlobal', dict)
+
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)
