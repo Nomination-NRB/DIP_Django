@@ -534,10 +534,10 @@ class sharpen(APIView):  # 锐化滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
+        # ValueOfSharpen、inputSharpenSize
+        # ValueOfSharpen、inputSharpenSize
+        dict['ValueOfSharpen']=request.data.get('ValueOfSharpen')
+        dict['inputSharpenSize']=int(request.data.get('inputSharpenSize'))
 
         opera('sharpen', dict)
         # 以下也是复制粘贴

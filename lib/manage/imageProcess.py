@@ -296,8 +296,6 @@ def adaptive_median(image, smax=7):
 def sobel(img, ksize=3):
     sobelx = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=ksize)
     sobely = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=ksize)
-    abs_sobelx = cv2.convertScaleAbs(sobelx)
-    abs_sobely = cv2.convertScaleAbs(sobely)
     sobel = np.uint8(cv2.normalize(abs(sobelx) + abs(sobely), None, 0, 255, cv2.NORM_MINMAX))
     # return abs_sobelx,abs_sobely,sobel
     return sobel
@@ -485,5 +483,13 @@ def wienerFilter(img, PSF=None, eps=0, K=0):
     imgWienerFilter = np.abs(np.fft.fftshift(imgWienerFilter))
     return imgWienerFilter
 
-def sharpen():
-    pass
+def sharpen(img,ValueOfSharpen,inputSharpenSize):
+    ksize=inputSharpenSize
+    if ValueOfSharpen=='Sobel':
+        return sobel(img,ksize)
+    elif ValueOfSharpen=='LoG':
+        return LoG(img,ksize)
+    elif ValueOfSharpen=='Laplace':
+        return laplacian(img,ksize)
+    else :
+        return image
