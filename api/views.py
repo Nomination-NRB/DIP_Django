@@ -582,9 +582,10 @@ class lowFilter(APIView):  # 低通滤波
         dict = {}
         dict['filepath'] = path
         #ValueOfLowFilter、inputLowThreshold、n
-        dict['ValueOfLowFilter']=request.data.get('ValueOfLowFilter')
-        dict['inputLowThreshold']=int(request.data.get('inputLowThreshold'))
-        if request.data.get('n')!='':
+        #ValueOfFilter、inputThreshold、n
+        dict['ValueOfFilter']=request.data.get('ValueOfLowFilter')
+        dict['inputThreshold']=int(request.data.get('inputLowThreshold'))
+        if request.data.get('n')!='' :
             dict['n']=request.data.get('n')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
@@ -607,36 +608,19 @@ class highFilter(APIView):  # 高通滤波
         # 调用处理函数
         dict = {}
         dict['filepath'] = path
+        # ValueOfHighFilter、inputHighThreshold、n
+        #ValueOfFilter、inputThreshold、n
+        dict['ValueOfFilter'] = request.data.get('ValueOfHighFilter')
+        dict['inputThreshold'] = int(request.data.get('inputHighThreshold'))
+        if request.data.get('n') != '':
+            dict['n'] = request.data.get('n')
         # dict['a']=request.data.get('a')
         # dict['b']=request.data.get('b')
         # dict['c']=request.data.get('c')
         # dict['d']=request.data.get('d')
 
 
-        opera('#zeho', dict)
-        # 以下也是复制粘贴
-        # 返回定制格式的JSON
-        return success(serializer.data)
-
-class partition(APIView):  # 高通滤波
-    def post(self, request):
-        # 获取图片
-        images = Image.objects.get(id=request.data.get('id'))
-        serializer = ImageSerializer(images, context={'request': request})
-
-        path = re.search(r'media/(.*)', serializer.data['file']).group()
-        # 以上为复制粘贴操作
-
-        # 调用处理函数
-        dict = {}
-        dict['filepath'] = path
-        # dict['a']=request.data.get('a')
-        # dict['b']=request.data.get('b')
-        # dict['c']=request.data.get('c')
-        # dict['d']=request.data.get('d')
-        dict['ValueOfOtsuOrGlobal'] = request.data.get('ValueOfOtsuOrGlobal')
-
-        opera('#zeho', dict)
+        opera('highFilter', dict)
         # 以下也是复制粘贴
         # 返回定制格式的JSON
         return success(serializer.data)

@@ -619,21 +619,22 @@ def toTransBtws(img, operater, d0, n):
     out = np.fft.ifftshift(out)
     out = np.fft.ifft2(out)
     return np.abs(out)
-def lowFilter(img,ValueOfLowFilter,inputLowThreshold,n=0):
-    if ValueOfLowFilter=='ideal':
-        return toTrans(img,ideal_low_pass,inputLowThreshold)
-    elif ValueOfLowFilter=='butterworth':
-        return toTransBtws(img,butterworth_low_pass,inputLowThreshold,n)
-    elif ValueOfLowFilter=='gaussian':
-        return toTrans(img,gaussian_low_pass,inputLowThreshold)
+
+def lowFilter(img,ValueOfFilter,inputThreshold,n=0):
+    if ValueOfFilter=='ideal':
+        return toTrans(img,ideal_low_pass,inputThreshold)
+    elif ValueOfFilter=='butterworth':
+        return toTransBtws(img,butterworth_low_pass,inputThreshold,n)
+    elif ValueOfFilter=='gaussian':
+        return toTrans(img,gaussian_low_pass,inputThreshold)
     else :
         return img
-def highFilter(img,ValueOfLowFilter,inputLowThreshold,n=0):
-    if ValueOfLowFilter=='ideal':
-        return toTrans(img,ideal_high_pass,inputLowThreshold)
-    elif ValueOfLowFilter=='butterworth':
-        return toTransBtws(img,butterworth_high_pass,inputLowThreshold,n)
-    elif ValueOfLowFilter=='gaussian':
-        return toTrans(img,gaussian_high_pass,inputLowThreshold)
+def highFilter(img,ValueOfFilter,inputThreshold,n=0):
+    if ValueOfFilter=='idealHigh':
+        return toTrans(img,ideal_high_pass,inputThreshold)
+    elif ValueOfFilter=='butterworthHigh':
+        return toTransBtws(img,butterworth_high_pass,inputThreshold,n)
+    elif ValueOfFilter=='gaussianHigh':
+        return toTrans(img,gaussian_high_pass,inputThreshold)
     else :
         return img
